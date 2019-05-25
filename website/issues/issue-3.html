@@ -1,0 +1,78 @@
+<h1>S4TF News - Issue 3, March 31st 2019</h1>
+<p>Welcome to the Issue #3 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>A new development snapshot for Xcode 10 was released on March 26th. Get it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2019-03-26-a-osx.pkg">here</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/rxwei">Richard Wei</a> and <a href="https://twitter.com/jekbradbury">James Bradbury</a> will be spkeaing at <a href="https://events.google.com/io/schedule/events/">Google I/O 2019</a> about <a href="https://events.google.com/io/schedule/events/88dd5d2b-5e02-45b6-b603-dbb3bd673b66">Swift for TensorFlow</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/dynamicwebpaige?lang=en">Paige Bailey</a> was a guest on the on <a href="https://twimlai.com">TWiML &amp; AI</a> podcast. She talks about the latests TensorFlow updates including <strong>Swift for Tensorflow</strong>. Check out the <a href="https://twimlai.com/twiml-talk-242-exploring-tensorflow-2-0-with-paige-bailey/">interview</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> started a discussion on having fancy indexing for Tensors. The conversation turned into a concrete pull request:  <a href="https://github.com/apple/swift/pull/23684">PR-23684</a> that implements advanced indexing and slicing for Tensors. [<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/LPDeqmFU8n4/7h9xdTbMBAAJ">original message</a>]</p>
+</li>
+<li>
+<p>If you are a student and would like to <a href="https://twitter.com/rxwei/status/1111398821722914816">contribute to the project</a> during the <a href="https://developers.google.com/open-source/gsoc/timeline">Google Summer of Code 2019</a>  reach out to the team via the <a href="https://groups.google.com/a/tensorflow.org/d/forum/swift">mailing list</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23647">PR-23647</a>: Moves into to the <a href="https://github.com/tensorflow/swift-apis">swift-apis</a> repository the following objects:</p>
+<ul>
+<li>Ops: <code>batchNormalized</code>, <code>convolved2D</code>, <code>maxPooled</code>, <code>averagePooled</code>.</li>
+<li>Gradients for : <code>batchNormalized</code>, <code>conv2d</code> for input and filter, <code>convolved2D</code>, <code>maxPooled</code>, <code>averagePooled</code>.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/22854">PR-22854</a>: Introduces derivation for protocols: <code>TensorGroup</code> and <code>TensorArrayProtocol</code>. As well, you now can use <code>Zip2TensorGroup</code> instead of <code>TensorPair</code> to represent a tuple of two types conforming to <code>TensorGroup</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23521">PR-23521</a>: Introduces <code>AnyDerivative</code>. A type-erased derivative value that forwards operations to it's underlaying derivative value which conforms to <code>Differentiable</code> and <code>AdditiveArithmetic</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/65">PR-65</a>: Introduces <code>GlobalAveragePooling2D</code> layer.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/64">PR-64</a>: Introduces <code>TransposedConv2D</code> layer.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/63">PR-63</a>: Moves in operations and gradients that were removed from the Swift compiler repository in <a href="https://github.com/apple/swift/pull/23647">PR-23647</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/61">PR-61</a>: Introduces upsampling layer for 1-D inputs: <code>UpSampling1D</code>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/75">PR-75</a>: Adds a <code>ResNet20</code> model.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/69">PR-69</a>: <code>MNIST</code> uses now a simple CNN.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/57">PR-57</a>: Updates <code>ResNet</code> model to train as well on <code>CIFAR-10</code>.</p>
+</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently tickets for starters:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-130">TF-130</a>: Add API to serialize a <code>@convention</code>(tensorflow) function as a graph.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

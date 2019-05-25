@@ -1,0 +1,72 @@
+<h1>S4TF News - Issue 8, May 5th 2019</h1>
+<p>Welcome to the Issue #8 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><strong>Version 0.3.1</strong> of Swift for Tensorflow has been released. Download a <a href="https://github.com/tensorflow/swift/blob/master/Installation.md">pre-built package</a>.</p>
+</li>
+<li>
+<p>This week <a href="https://twitter.com/wellfedwookiee">James Thompson</a> wrote a nice post about <a href="https://medium.com/@build_it_for_fun/neural-style-transfer-with-swift-for-tensorflow-b8544105b854">Neural Style Transfer using Swift for Tensorflow</a>. You can find the code he used for this write-up <a href="https://github.com/regrettable-username/style-transfer">here</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/bradlarson">Brad Larson</a> got a CUDA-enabled Swift for Tensorflow toolchain working on NVIDIA Jetson devices. Read the details on his post on the <a href="https://forums.fast.ai/t/gpu-enabled-swift-for-tensorflow-build-for-nvidia-jetson-devices/45281">fast.ai forums</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/vibhuthasak">Vibhutha Kumarage</a> wrote a guide on how to install Swift for Tensorflow on Ubuntu 18.04 LTS Bionic Beaver. At the end of the guide you will be able to write Swift and use Swift for Tensorflow on a Jupiter notebook. Check out the guide <a href="https://vibhuthasak.github.io/posts/swift-tensorflow-guide/">here</a>.</p>
+</li>
+<li>
+<p><a href="https://forums.fast.ai/u/ste">Stefano Giomo</a> wrote this great S4TF cheat sheet for PyTorch users. Get it <a href="https://forums.fast.ai/t/tensors-quick-chart-pytorch-to-from-s4tf/44911?u=vguerra">here</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24462">PR-24462</a>: Removes all related code to Graph Operation Instructions.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24423">PR-24423</a>: Removes <code>TFConstExpr</code>.</p>
+</li>
+<li>
+<p>The following PRs substitute usage of <code>#tfop</code> by their counter part operations in <code>Raw.*</code>.</p>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/24449">PR-24449</a>: Compiler will mark as error usages of <code>#tfop</code>.</li>
+<li><a href="https://github.com/apple/swift/pull/24425">PR-24425</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24418">PR-24418</a>: Removes Graph Program Extraction passes.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24381">PR-24381</a>: Disables attributes: <code>@convention(tensorflow)</code> and <code>@TensorFlowGraph</code>. As well, the following passes: <code>TFDeabstractionMandatory</code>, <code>TFDeabstractionOpt</code>, <code>TFPartitionMandatory</code>, <code>TFPartitionOpt</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24373">PR-24373</a>: Adds method <code>Dataset.map(parallelCallCount:transform:)</code> based on parallel map operation.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23661">PR-23661</a>: Introduces two versions of the following passes: <code>TFDeabstraction</code> (<code>TFDeabstractionMandatory</code>, <code>TFDeabstractionOpt</code>) and <code>TFPartition</code> (<code>TFPartitionMandatory</code> and <code>TFPartitionOpt</code>). The passes suffixed with -<code>Mandatory</code> process only tensorflow convention functions. The ones suffixed with -<code>Opt</code> process the non-tensorflow convention functions.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24355">PR-24355</a>: removes deprecated <code>Tensor.selecting(_:_:)</code></p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/142">PR-142</a>: Adds Docker file to the repository.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/139">PR-139</a>: Refactors WideResNet so that it uses <code>reduce</code> Operation.</p>
+</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-416">TF-416</a>: Produce error upon second usage of <code>PythonLibrary.useVersion</code>.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

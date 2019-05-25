@@ -1,0 +1,61 @@
+<h1>S4TF News - Issue 0, March 10th 2019</h1>
+<p>Welcome to the Issue #0 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift/blob/master/Installation.md">Version 0.2</a> of the pre-built packages was released on March 1st.</p>
+</li>
+<li>
+<p>Check out the TensorFlow Dev Summit '19 presentation from <a href="https://twitter.com/clattner_llvm">Chris Lattner</a> and <a href="https://twitter.com/bsaeta">Brennan Saeta</a> about Swift for Tensorflow: <a href="https://youtu.be/s65BigoMV_I">The Next-Generation Machine Learning Framework</a>. You can as well have a look at the notebooks used during the presentation in <a href="https://github.com/saeta/s4tf-dev-summit-19">github</a>.</p>
+</li>
+<li>
+<p>During the TensorFlow Dev Summit '19 [fast.ai]|(https://www.fast.ai/) announced that they will embrace Swift for Tensorflow in a couple of their lessons. Even more exciting: <a href="https://twitter.com/clattner_llvm">Chris Lattner</a> will be co-teaching them. Check out the <a href="https://www.fast.ai/2019/03/06/fastai-swift/">official announcement</a> written by <a href="https://twitter.com/jeremyphoward">Jeremy Howard</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/tajymany">Tanmay Bakshi</a> has been sharing on <a href="https://www.youtube.com/channel/UCqufIGIYauviVaKyJUzKvQw">his youtube channel</a> great videos on how to use Swift for Tensorflow. Check them out! So far he's got: <a href="https://www.youtube.com/watch?v=p64f6befZkw">Python interoperability</a>, a <a href="https://www.youtube.com/watch?v=_D-l7OGq83U">CNN for digit classification</a> and <a href="https://www.youtube.com/watch?v=mQX96CT8kkA">OpenAI-Unsupervised Sentiment Neuron</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/JacopoMangia">Jacopo Mangiavacchi</a> has shared <a href="https://twitter.com/JacopoMangia/status/1102280988778913793?s=20">on Twitter</a> a bunch of sample notebooks showcasing Swift for Tensorflow, <a href="https://github.com/JacopoMangiavacchi/Swift-TensorFlow-Sample-Notebooks">check them out</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/bradlarson">Brad Larson</a> writes about his experience on <a href="https://www.perceptuallabs.com/blog/2019/2/27/training-alexnet-using-swift-for-tensorflow">training AlexNet using Swift for TensorFlow</a>. You can find his code on <a href="https://github.com/BradLarson/AlexNet-Swift">github</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p>This year the Tensorflow project has been accepted as an official <a href="https://summerofcode.withgoogle.com/organizations/6137730124218368/">open source mentor</a> and among the <a href="https://docs.google.com/document/d/1zT57PFMGZ04A4CvHxAKVpMTgXjsO92_oKeSKwZMc0Gs/edit#heading=h.lfnnqlbxlyqh">proposed ideas</a> to work on you can find 4 projects under the Swift for Tensorflow umbrella. Read all about it in the <a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/B3oWPZsaKi8/ks0nKYFaAQAJ">official announcement</a> in the mailing list.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/rxwei">Richard Wei</a> shared the <a href="https://www.tensorflow.org/swift/">new project page</a>, <a href="https://www.tensorflow.org/swift/api_docs">API documentation</a> and several tutorials that were released during the Tensorflow Dev Summit '19. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/qeuNIwWdszE/7Q08n-x5CAAJ">original post</a>).</p>
+</li>
+<li>
+<p><a href="https://medium.com/@volodymyr_87041">Volodymyr Pavliukevych</a> shared his swift package to track and visualize Tensors in Tensorboard. He is calling his package: <a href="https://github.com/KrakenCL/KrakenKit">KrakenKit</a>. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/VIdzVMek-Fs/E08e6EU_BwAJ">original post</a>).</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift APIs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/46">PR-46</a>: Better documentation for Optimizers.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/47">PR-47</a>: Better documentation for Layers.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/40">PR-40</a>: Added index-based Softmax Cross-entropy loss.</li>
+</ul>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li><a href="https://github.com/apple/swift/commit/8e1b5b84078038596bd3418cdd640b2c4fb26640">8e1b5b8</a>: Fixes FloatingPoint.squareRoot's derivative in the stdlib.</li>
+<li><a href="https://github.com/apple/swift/pull/23093">PR-23093</a>, <a href="https://github.com/apple/swift/pull/23069">PR-23069</a>: Improvements on API Documentation.</li>
+<li><a href="https://github.com/apple/swift/pull/23036">23036</a>: Add operators for custom gradients.</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open <a href="https://bugs.swift.org/browse/TF-351?jql=labels%20%3D%20StarterBug%20and%20project%20%3D%20%22%20Swift%20for%20TensorFlow%22">Starter Bugs</a>:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-342">TF-342</a>: [Python] Adopt Python iterator C API.</li>
+<li><a href="https://bugs.swift.org/browse/TF-337">TF-337</a>: PythonObject conformance to Sequence uses array indexing instead of Python.iter(...).</li>
+<li><a href="https://bugs.swift.org/browse/TF-336">TF-336</a>: [Python] Add unit testing infrastructure for Python 2 and 3</li>
+<li><a href="https://bugs.swift.org/browse/TF-130">TF-130</a>: Add API to serialize a @convention(tensorflow) function as a graph</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>: [AD] BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

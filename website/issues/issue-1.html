@@ -1,0 +1,46 @@
+<h1>S4TF News - Issue 1, March 17th 2019</h1>
+<p>Welcome to the Issue #1 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://medium.com/@prannaykhosla">Prannay Khosla</a> shared on a <a href="https://medium.com/@prannaykhosla/swift-for-tensorflow-is-that-it-26b705eb82cd">Medium a post</a> his view on what features a language suited for Machine Learning systems development would need to offer.</p>
+</li>
+<li>
+<p>Back in January 2019, <a href="https://twitter.com/jeremyphoward">Jeremy Howard</a> wrote a very nice article on which he explores numeric programming in Swift, the article is called
+<a href="https://www.fast.ai/2019/01/10/swift-numerics/">High Performance Numeric Programming with Swift: Explorations and Reflections</a>. I encourage you to take some time to read it. The section that I found most interestig is <em>The Warts</em>, where he goes over some pain points he faced when using Swift and highlights areas of improvement for the Swift ecosystem.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/rxwei">Richard Wei</a> gave a talk about Swift for Tensorflow back in November 30th 2018 at the O'Reilly AI Conference in San Francisco. You can find the recording of <a href="https://www.youtube.com/watch?v=mu0j4Gd2YY8">his talk</a> in the Tensorflow's youtube channel.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/dancherp">Dan Zheng</a> shared the updated list of thecnical documents for Swift for Tensorflow. If you want to deep dive into the details of the project, you defenitely need to go through the list <a href="https://github.com/tensorflow/swift#technology-deep-dive">here</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/dancherp">Dan Zheng</a> put together a useful <a href="https://gist.github.com/dan-zheng/4e156113b8783ca26d9e3fae7baa8a27">gist</a> detailing how you can select a given Python version for Swift's Python interoperability. Documentation covering this will be added soon but you can use the gist in the meantime ;). See the <a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/DYlTRDP2clQ/CqHCBDKFCwAJ">original message</a></p>
+</li>
+<li>
+<p><a href="https://twitter.com/bradlarson">Brad Larson</a> raised a interesting discussion regarding <a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/NLS64FP7hK0/DdE4bt57BwAJ">import/exporting</a> models into/from Swift for TensorFlow.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/23299">PR-23299</a> adds derivative for <code>abs</code>.</li>
+<li><a href="https://github.com/apple/swift/pull/23166">PR-23166</a>, <a href="https://github.com/apple/swift/pull/23278">PR-23278</a>, <a href="https://github.com/apple/swift/pull/23002">PR-23002</a> and <a href="https://github.com/apple/swift/pull/23316">PR-23316</a>: Improve the state of tests.</li>
+<li><a href="https://github.com/apple/swift/pull/23340">PR-23340</a>, <a href="https://github.com/apple/swift/pull/23350">PR-23350</a> and <a href="https://github.com/apple/swift/pull/23353">23353</a>: Work on support for <code>@differentiating</code> attribute as <code>@differentiable(vjp: ...)</code> will soon be deprecated.</li>
+<li><a href="https://github.com/apple/swift/pull/23352">PR-23352</a>: <code>ShapeArray</code> and <code>ShapeArraySlice</code> have an <code>init(reshape:shape:)</code> initializer, deprecating <code>init(shape:repeating:)</code></li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open <a href="https://bugs.swift.org/browse/TF-130?jql=labels%20%3D%20StarterBug%20and%20project%20%3D%20%22%20Swift%20for%20TensorFlow%22">Starter Bugs</a>:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-130">TF-130</a>: Add API to serialize a <code>@convention</code>(tensorflow) function as a graph.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

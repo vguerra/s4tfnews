@@ -1,0 +1,25 @@
+# List of people in S4TF News
+
+This is the list of people I have mentioned in the newsletter:
+
+* [Chris Lattner](https://twitter.com/clattner_llvm?lang=en)
+* [Mingsheng Hong](https://twitter.com/mingshenghong)
+* [Meghan Kane](https://twitter.com/meghafon)
+* [Richard Wei](https://twitter.com/rxwei)
+* [Dan Zheng](https://twitter.com/dancherp)
+* [Karthik Ramesh Iyer](https://github.com/KarthikRIyer)
+* [Paige Bailey](https://twitter.com/dynamicwebpaige?lang=en)
+* [James Bradbury](https://twitter.com/jekbradbury)
+* [Anthony Platanios](https://twitter.com/eaplatanios)
+* [Dough Friedman](https://twitter.com/realdoug)
+* [Tatiana Shpeisman](https://dblp.uni-trier.de/pers/hd/s/Shpeisman:Tatiana)
+* [Jeremy Howard](https://twitter.com/jeremyphoward)
+* [Fabrizio Milo](https://twitter.com/fabmilo)
+* [Marc Rasi](http://www.marcrasi.com/)
+* [Pablo Cuenca](https://github.com/pcuenca)
+* [Zaid Alyafeai](https://twitter.com/zaidalyafeai)
+* [James Thompson](https://twitter.com/wellfedwookiee)
+* [Brad Larson](https://twitter.com/bradlarson)
+* [Vibhutha Kumarage](https://twitter.com/vibhuthasak)
+* [Brennan Saeta](https://twitter.com/bsaeta)
+* [Brett Koonce](https://twitter.com/asparagui)

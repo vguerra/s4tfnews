@@ -1,0 +1,64 @@
+<h1>S4TF News - Issue 4, April 7th 2019</h1>
+<p>Welcome to the Issue #4 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>The Google Brain team at Google is hiring Swift developers with Machine Learning skills. If you are interested then check out the <a href="https://gist.github.com/lattner/5cf81ce99fece780450428f93c21e400">Job posting</a> shared by <a href="https://twitter.com/clattner_llvm?lang=en">Chris Lattner</a> on <a href="https://twitter.com/clattner_llvm/status/1113889147914080256">twitter</a>.</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> asked for advice on how to include a CMake target in SPM. His goal was to add support for Gym retro to Swift. Check out his resulting implementation: <a href="https://github.com/eaplatanios/retro-swift">Retro Games in Gym for Swift</a>. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/uCtLj4yoRQI/rNK02tgVAQAJ">original message</a>).</li>
+<li>Following up a discussion <a href="https://twitter.com/eaplatanios">Anthony Platanios</a> initiated last week about <a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/LPDeqmFU8n4/7h9xdTbMBAAJ">fancy ways of indexing Tensors</a>, he started a discussion on the Swift forums about the same topic: <a href="https://forums.swift.org/t/advanced-array-tensor-indexing/22589">Advanced Arrat/Tensor Indexing</a>.</li>
+<li>Shawn Morel raised the question on the mailing list about what is the current state on how to track upstream changes into the Swift compiler. Following up some of the points raised, <a href="https://twitter.com/rxwei">Richard Wei</a> asked on the Swift forums, what would be a good strategy to <a href="https://forums.swift.org/t/upstreaming-the-python-module/22577">upstream the Python module</a>. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/Xj1NOuqoeX0/3fod_TmiBwAJ">original message</a>).</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23833">PR-23833</a>: Introduces usage of raw operations:</p>
+<ul>
+<li><code>concatV2</code> for concatenating tensors w/out slow slice assignment.</li>
+<li><code>stridedSlice</code> to extract a strided slice of a tensor without custom computation of tensor indexes.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23738">PR-23738</a>: Adds derivatives for addition addition and substraction on <code>AnyDerivative</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23719">PR-23719</a>: Fixes a bug that would crash the compiler if differentiation properties have no getter.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/80">PR-80</a>: Initial work towards generalization of RNNs. It introduces a representation of inputs for RNNs (<code>RNNInput</code>) and the protocol <code>RNNCell</code> to represent a RNN cell.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/73">PR-73</a>: Adds support for explicit paddings to convolutional Ops.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/72">PR-72</a>: Introduces <code>GlobalAveragePooling3D</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/66">PR-66</a>: Introduces <code>GlobalAveragePooling1D</code>.</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-models/pull/86">PR-86</a>: Introduces pre-activated Residual Networks. Variants <code>PreActivatedResNet18</code> and <code>PreActivatedResNet34.</code></li>
+<li>The following variants for Residual Networks were added:
+<ul>
+<li><a href="https://github.com/tensorflow/swift-models/pull/76">PR-76</a>: Adds <code>ResNet20</code>, <code>ResNet32</code>, <code>ResNet44</code> and <code>ResNet56</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-models/pull/81">PR-81</a>: Adds <code>ResNet101</code> and <code>ResNet152</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-models/pull/79">PR-79</a>: Adds <code>ResNet18</code> and <code>ResNet34</code>.</li>
+</ul>
+</li>
+</ul>
+<h4>Swift for Tensorflow Docs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift/pull/165">PR-165</a>: Adds a Jupyter notebook explaining how Python Interoperability works.</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently tickets for starters:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-419">TF-419</a>: Improve tensor printing.</li>
+<li><a href="https://bugs.swift.org/browse/TF-416">TF-416</a>: Produce error upon second usage of <code>PythonLibrary.useVersion</code>.</li>
+<li><a href="https://bugs.swift.org/browse/TF-130">TF-130</a>: Add API to serialize a <code>@convention</code>(tensorflow) function as a graph.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

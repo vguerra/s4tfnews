@@ -1,0 +1,78 @@
+<h1>S4TF News - Issue 9, May 12th 2019</h1>
+<p>Welcome to the Issue #9 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>This week, <a href="https://twitter.com/jekbradbury">James Bradbury</a> and <a href="https://twitter.com/rxwei">Richard Wei</a> talked about Swift for Tensorflow during Google I/O'19 and the <a href="https://www.youtube.com/watch?v=3fJsqGHhlVA">recording is online</a>. You can as well access the <a href="https://github.com/tensorflow/swift/tree/io19/demos">notebooks</a> they demoed.</p>
+</li>
+<li>
+<p>The GSoC'19 Student-projects for the <a href="https://summerofcode.withgoogle.com/organizations/6137730124218368/">Tensorflow organization</a> have been announced and here we have the selected project ideas for Swift for Tensorflow:</p>
+<ul>
+<li>
+<p>Ayush Agrawal will be working on <a href="https://summerofcode.withgoogle.com/projects/#4520326505955328">End-to-End Mobile Swift for Tensorflow Application</a>.</p>
+</li>
+<li>
+<p>Karthik Ramesh Iyer will be working on <a href="https://summerofcode.withgoogle.com/projects/#4558376158101504">Data Visualization library for Swift</a>.</p>
+</li>
+<li>
+<p>Victor Antony will be working on <a href="https://summerofcode.withgoogle.com/projects/#5012389299224576">Adding traditional Machine Learning algorithms to Swift for Tensorflow</a>.</p>
+</li>
+<li>
+<p>Param Bhavsar will be working on <a href="https://summerofcode.withgoogle.com/projects/#5754013750919168">Add traditional machine learning algorithms to the Swift TensorFlow library</a>.</p>
+</li>
+</ul>
+<p><strong>Congratulations</strong> to all four of them! 🎊.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/dancherp">Dan Zheng</a> posted the official announcement of Swift for TensorFlow v0.3.1. Congratulations to the team and everyone who contributed to make this happen! 👏🏼 . (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/S6KyX1szLuY/akpqY7yDAgAJ">original message</a>).</p>
+</li>
+<li>
+<p><a href="https://twitter.com/bsaeta">Brennan Saeta</a> explains the reason of recent commits removing GPE from the Swift compiler (tensorflow branch). (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/3bixC_ujQcg/_SSW4Mi4AgAJ">original message</a>).</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p>Removal of dead/legacy code:</p>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/24721">PR-24721</a>: GEP documentation and diagnostics.</li>
+<li><a href="https://github.com/apple/swift/pull/24723">PR-24723</a>: Utility functions for GPE send/receive testing.</li>
+<li><a href="https://github.com/apple/swift/pull/24720">PR-24720</a>: <code>#tfop</code> code.</li>
+<li><a href="https://github.com/apple/swift/pull/24719">PR-24719</a>: GPE related code.</li>
+<li><a href="https://github.com/apple/swift/pull/24714">PR-24714</a>: AutoDiff Tape.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24668">PR-24668</a>: Fixes compiler crash when making a synthetized member conform to a protocol with property requirements.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24639">PR-24639</a>: Improves diagnostics for non-differentiability by making sure that error and note are produced as well as avoiding duplicates.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24568">PR-24568</a>: Brings back <code>TensorFlowRuntime</code> tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24567">PR-24567</a>: Adds attempt to inline (using <code>@inlinable</code>) <code>var allKeyPaths</code> only when all stored properties are public.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24543">PR-24543</a>: Improves printing of differentiation parameters clause for attributes <code>@differentiable</code> and <code>@differentiating</code> when printing AST and diagnostics.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24538">PR-24538</a>: Disallows derived conformances in extentions across files for the following protocols: <code>AdditiveArithmetic</code>, <code>VectorNumeric</code>, <code>KeyPathIterable</code>, <code>Differentiable</code>, <code>TensorArrayProtocol</code>, <code>TensorGroup</code>.</p>
+</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-416">TF-416</a>: Produce error upon second usage of <code>PythonLibrary.useVersion</code>.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

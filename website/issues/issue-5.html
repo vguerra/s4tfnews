@@ -1,0 +1,68 @@
+<h1>S4TF News - Issue 5, April 14th 2019</h1>
+<p>Welcome to the Issue #5 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://dblp.uni-trier.de/pers/hd/s/Shpeisman:Tatiana">Tatiana Shpeisman</a> and <a href="https://twitter.com/clattner_llvm?lang=en">Chris Lattner</a> gave a Keynote at the <a href="http://llvm.org/devmtg/2019-04/">2019's European LLVM Developers meeting</a> where they introduced <a href="https://github.com/tensorflow/mlir">MLIR</a>: A Multi-Level Intermediate Representation for Compiler Infrastructure. This project is important for the Swift For Tensorflow as it would bring benefits in many areas. You can find the slides of the presentation <a href="http://llvm.org/devmtg/2019-04/slides/Keynote-ShpeismanLattner-MLIR.pdf">here</a>.</p>
+</li>
+<li>
+<p>As you might know already, <a href="https://summerofcode.withgoogle.com/organizations/6137730124218368/">TensorFlow</a> is an official mentoring organization for 2019 edition of GSoC. Within the list of projects proposed there are some exciting ideas for Swift for TensorFlow. The deadline for the application was the past 9th of April. Accepted projects will be announced on May 6. Stay tunned.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> raised the question of when to use <code>ShapedArray</code> vs CPU Tensors. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/8BDkzQT9CVQ/stRy5S5qAwAJ">original message</a>).</li>
+<li>If you, as <a href="https://twitter.com/realdoug">Dough Friedman</a>, ever wondered how all operations are defined in the <code>Raw</code> namespace, check out the <a href="https://github.com/tensorflow/swift-bindings"><code>swift-bindings</code></a> repo to see out how it all works. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/EXZ0asjo0HQ/Zp32_EE0AwAJ">original message</a>).</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24013">PR-24013</a>: Add derivative on <code>AnyDerivative</code>'s initializer.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23837">PR-23837</a>: Improves pretty-printing of Tensors.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23854">PR-23854</a>: Enables propagation of <code>@nondiff</code> attribute from AST to SIL.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23762">PR-23762</a>: <code>TensorShape</code> now conforms to <code>PythonConvertible</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23811">PR-23811</a>: Extends <code>Tensor</code> with <code>variance</code> method to compute it's variance along a specific axis.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23868">PR-23868</a>: Adds API for function tracing with XLA compilation.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23763">PR-23763</a>: Extends <code>Tensor</code> with <code>standardDeviation</code> method to compute the standard deviation along a specific axis. As well it adds derivaties for <code>sum</code> and <code>mean</code> along a specific axis.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23843">PR-23843</a>: Introduces usage of <a href="https://developer.apple.com/documentation/swift/sequence/2996794-allsatisfy"><code>allSatisfy</code></a> and removes custom <code>forAll</code> extention on <code>Sequence</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/87">PR-87</a>: <code>context</code> argument has been removed from <code>applied</code> method on all Layers. Instead, the newly introduced <code>ContextManager</code> class handles a stack of contexts for a given thread.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/86">PR-86</a>: Improvements on the RNN Cell abstraction. Introduces <code>RNNCellInput</code> and <code>RNNCellOutput</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/81">PR-81</a>: Allos learning rates to be set dynamically.</p>
+</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-416">TF-416</a>: Produce error upon second usage of <code>PythonLibrary.useVersion</code>.</li>
+<li><a href="https://bugs.swift.org/browse/TF-130">TF-130</a>: Add API to serialize a <code>@convention</code>(tensorflow) function as a graph.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

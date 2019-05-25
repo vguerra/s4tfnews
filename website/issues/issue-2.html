@@ -1,0 +1,61 @@
+<h1>S4TF News - Issue 2, March 24th 2019</h1>
+<p>Welcome to the Issue #2 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>Back in November 2018, during the <a href="https://llvm.org/devmtg/2018-10/">2018 Bay Area LLVM Developer's Meeting</a>, <a href="https://twitter.com/mingshenghong">Mingsheng Hong</a> and <a href="https://twitter.com/clattner_llvm">Chris Lattner</a> talked about Graph Program Extraction (<a href="https://github.com/tensorflow/swift/blob/master/docs/GraphProgramExtraction.md">GPE</a>) and Device Partitioning within Swift for Tensorflow. You can watch the <a href="https://youtu.be/HSneJdPkaKk">video</a> of the talk and have a look at the <a href="https://llvm.org/devmtg/2018-10/slides/Hong-Lattner-SwiftForTensorFlowGraphProgramExtraction.pdf%22">slides</a> 📺.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/meghafon">Meghan Kane</a> will be speaking at <a href="https://twitter.com/SwiftAveiro/status/1109134071878299648">SwiftAverio</a> this coming June about <em>Getting Started with Swift for Tensorflow</em>. We are looking forward to the talk 😊.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/rxwei">Richard Wei</a> and <a href="https://twitter.com/dancherp">Dan Zheng</a> wrote a pitch for Swift Evolution that aims to introduce <a href="https://gist.github.com/rxwei/5986ab3c9d705f0560e8532d0650c7db">static callables</a> in the language. This would greatly help to make the Swift for Tensorflow APIs easier to use and clearer to read. Check out the post in the Swift forums <a href="https://forums.swift.org/t/pitch-introduce-static-callables/21732">here</a>.</p>
+</li>
+<li>
+<p>If you are contributing (or looking to) to the compiler, here are two links that you definitely need to check out: <a href="https://github.com/apple/swift/blob/tensorflow/docs/DebuggingTheCompiler.rst">Debugging the Compiler</a> and this post in the Swift Forums about <a href="https://forums.swift.org/t/need-a-workflow-advice/12536/14?u=dan-zheng">development workflow advice</a>. [<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/lE4FZdV2c1Y/DjsjMbZZAQAJ">original message</a>].</p>
+</li>
+<li>
+<p><a href="https://github.com/KarthikRIyer">Karthik Ramesh Iyer</a> is making great progress on his proposal for the GSoC 2019 Data Visualization Project. Several memebers of the community have jumped in giving great advice. Have a look at the <a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/mWdf5HnEO1I/XVNhENCiAQAJ">conversation</a> for details.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>Work related to <code>@differentiating</code> attribute:
+<ul>
+<li><a href="https://github.com/apple/swift/pull/23384">PR-23384</a>: Allows usage of <code>@differentiating</code> in a more generic context.</li>
+<li><a href="https://github.com/apple/swift/pull/23373">PR-23373</a>: <code>@differentiating</code> cab be used on subscripts.</li>
+<li><a href="https://github.com/apple/swift/pull/23370">PR-23370</a>: Alows <code>@differentiating</code> attribute to support <code>wrt</code> clauses.</li>
+<li>Several bug fixes: <a href="https://github.com/apple/swift/pull/23379">PR-23379</a>, <a href="https://github.com/apple/swift/pull/23383">PR-23383</a></li>
+<li><a href="https://github.com/apple/swift/pull/23393">PR-23193</a>: Increasing usage of <code>@differentiating</code> within the standard library.</li>
+</ul>
+</li>
+<li><a href="https://github.com/apple/swift/pull/23339">PR-23339</a>: Allows TensorHandle Scalar to used from <code>@inlinable</code> code w/out exposure.</li>
+<li><a href="https://github.com/apple/swift/pull/23439">PR-23439</a>: Marks <code>flattened()</code> and <code>rankLifted()</code> as differentiable.</li>
+<li><a href="https://github.com/apple/swift/pull/23355">PR-23355</a>: Adds derivatives for reshaping methods.</li>
+<li><a href="https://github.com/apple/swift/pull/23268">PR-23268</a>: Makes <code>PythonObject</code> conform to <code>Sequence</code>.</li>
+<li><a href="https://github.com/apple/swift/pull/23351">PR-23351</a>: Allows convertion from Optionals to Python objects.</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/58">PR-58</a>: Introduces <code>Backpropagator</code> typealias.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/57">PR-57</a>: Introduces 3 news layers: <code>Conv1D</code>, <code>MaxPool1D</code> and <code>AvgPool1D</code>.</p>
+</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open <a href="">Starter Bugs</a>:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-130">TF-130</a>: Add API to serialize a <code>@convention</code>(tensorflow) function as a graph.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

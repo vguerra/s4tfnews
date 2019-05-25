@@ -1,0 +1,82 @@
+<h1>S4TF News - Issue 7, April 28th 2019</h1>
+<p>Welcome to the Issue #7 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>Swift for Tensorflow turned <a href="https://twitter.com/thomasviehmann/status/1121695837787234304">1 year old</a> this past April 26th . The <a href="https://github.com/tensorflow/swift/commits/f90040a44460a306f786436b9322336a79322d31">first commits</a> on the public repository were done on the 26th of April 2018. Congratulations to the Core team and everyone involved on coming this far!</p>
+</li>
+<li>
+<p><strong>Version 0.3</strong> of Swift for Tensorflow has been released. Checkout the <a href="https://github.com/tensorflow/swift/blob/master/RELEASES.md">release notes</a>. Download a <a href="https://github.com/tensorflow/swift/blob/master/Installation.md">pre-built package</a> or give it a try on  <a href="https://github.com/tensorflow/swift#tutorials-">Google Colaboratory</a>.</p>
+</li>
+<li>
+<p>This past Tuesday, the first session of the <a href="http://rsvp.usfca.edu/events/fast-ai-swift-for-tensorflow-workshop-the-data-institute/event-summary-8472634ee3d24af6862968edfbb6dcae.aspx">Fast.ai Swift for Tensorflow workshop</a> took place. If you want to follow up the development of the materials you can do so in the <a href="https://github.com/fastai/fastai_docs/tree/master/dev_swift">Fast.ai docs github repo</a>. Be sure to check out the <a href="https://forums.fast.ai/t/jeremys-harebrained-install-guide/43814">installation guide</a> for <a href="https://forums.fast.ai/t/new-codename-for-f4s4tf/40055">Harebrain</a> to be able to execute the notebooks.</p>
+</li>
+<li>
+<p>The video of the talk <em>MLIR: Multi-Level Intermediate Representation for Compiler Infrastructure</em> given by <a href="https://dblp.uni-trier.de/pers/hd/s/Shpeisman:Tatiana">Tatiana Shpeisman</a> and <a href="https://twitter.com/clattner_llvm?lang=en">Chris Lattner</a>   is <a href="https://youtu.be/qzljG6DKgic">now available</a>. As well, the video of the tutorial: <em>Building a Compiler with MLIR</em> is <a href="https://www.youtube.com/watch?v=cyICUIZ56wQ">up</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/zaidalyafeai">Zaid Alyafeai</a> shared on <a href="https://twitter.com/zaidalyafeai/status/1121921392478498818">Twitter</a> a repository where he keeps his <a href="https://github.com/zaidalyafeai/Swift4TF">Swift for Tensorflow Colab</a> notebooks.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/fabmilo">Fabrizio Milo</a> asked in the mailing list what Editors people use for development in Linux. Check out the <a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/C5IfL73zOh0/W2HPb67GBwAJ">responses</a>.</p>
+</li>
+<li>
+<p><a href="http://www.marcrasi.com/">Marc Rasi</a> shared <a href="https://github.com/latenitesoft/NotebookExport">NotebookExport</a> which is package that allows you to export code from your Swift for Tensorflow notebooks into Swif packages. Origianly created by <a href="https://github.com/pcuenca">Pablo Cuenca</a>. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/C5IfL73zOh0/VWT53-nGBwAJ">original message</a>)</p>
+</li>
+<li>
+<p><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> pointed out that he found a decrease in performance in code he ported from Python to Swift. Check out the <a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/3bixC_ujQcg/H71OUr31DAAJ">discussion</a>.</p>
+</li>
+<li>
+<p>Alex asked if there was an implementation of <code>tf.einsum</code> in Swift for Tensorflow. There is none for the time being but <a href="https://bugs.swift.org/browse/TF-463">TF-463</a> tracks it's implementation. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/uvn7NxEWZtI/-Pa9kRWrDQAJ">origianl message</a>)</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24229">PR-24229</a>: Updates <code>TensorArrayProtocol</code> so that it can be used for output Tensor arrays in Raw Ops.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24332">PR-24332</a>: Fixes <code>Array.DifferentiableView</code>'s conformance to <code>KeyPathIterable</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24298">PR-24298</a>: Fixes memory leaks in tracking.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24253">PR-24253</a>: Improves priting of <code>TensorShape</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24230">PR-24230</a>: Adds documentation for <code>PythonConvertible</code> and <code>ConvertibleFromPython</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/112">PR-112</a>: Introduces <code>UpSampling3D</code> layer.</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-models/pull/127">PR-127</a>: Allows you to run all models via SwiftPM.</li>
+</ul>
+<h4>Swift LLDB (tensorflow branch)</h4>
+<ul>
+<li><a href="https://github.com/apple/swift-lldb/pull/1490">PR-1490</a>: Allows you to simultaneously use Python versions 3.6 and 3.7. in lldb. So that if you are using Python 3.7 you can use the prebuilt toolchains of S4TF built with Python 3.6.</li>
+</ul>
+<h4>Swift Jupyter</h4>
+<ul>
+<li><a href="https://github.com/google/swift-jupyter/pull/58">PR-58</a>: Fixes issues of directive <code>%install</code> with modulemaps.</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-416">TF-416</a>: Produce error upon second usage of <code>PythonLibrary.useVersion</code>.</li>
+<li><a href="https://bugs.swift.org/browse/TF-130">TF-130</a>: Add API to serialize a <code>@convention</code>(tensorflow) function as a graph.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

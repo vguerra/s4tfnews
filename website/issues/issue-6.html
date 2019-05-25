@@ -1,0 +1,130 @@
+<h1>S4TF News - Issue 6, April 21st 2019</h1>
+<p>Welcome to the Issue #6 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>The first Swift for Tensorflow workshop is starting this 23rd of April in San Francisco at the Data Institute. The workshop is given by <a href="https://twitter.com/clattner_llvm">Chris Lattner</a> and <a href="https://twitter.com/jeremyphoward">Jeremy Howard</a>. If you are in San Francisco for the workshop dates, be sure to <a href="http://rsvp.usfca.edu/events/fast-ai-swift-for-tensorflow-workshop-the-data-institute/event-summary-8472634ee3d24af6862968edfbb6dcae.aspx">register</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/random_forests">Josh Gordon</a> sat with  <a href="https://twitter.com/jeremyphoward">Jeremy Howard</a> to talk about the plans <a href="https://www.fast.ai/">fast.ai</a> has for Swift for TensorFlow. Check out the <a href="https://www.youtube.com/watch?v=drSpCwDFwnM">interview</a>.</p>
+</li>
+<li>
+<p>A new toolchain for macOS has been released on the 18th of April. You can download it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2019-04-18-a-osx.pkg">here</a></p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> raised some issues he has been having related to Automatic Differentiation (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/a5vaC2GTY_w/rOHAlCzNCAAJ">original message</a>).</p>
+</li>
+<li>
+<p><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> asks about the lack of logical operators <code>.&amp;&amp;</code>, <code>.||</code>. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/K0C3ePC05UY/R8S7somQCwAJ">original message</a>).</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24195">PR-24195</a>: Improves install instructions with right version needed of Bazel.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24191">PR-24191</a>: <code>Tensor.expandingShape</code> supports <code>[Int]</code> or <code>Int</code> like its counterpart <code>Tensor.squeezingShape</code> does.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24164">PR-24164</a>: Fix throwing errors in backward pass for <code>sum(squeezinAxes:)</code> and <code>mean(squeezinAxes:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24120">PR-24120</a>: Adds <code>split</code> Op for tensor.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24122">PR-24122</a>: Introduces first implementation of evolution proposal <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0253-callable.md">SE-0253</a> for callables. (This is actually a 2nd version, if you want to have a look at the first implementation that got reverted check out <a href="https://github.com/apple/swift/pull/24086">PR-24086</a>).</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24096">PR-24096</a>: Adds <code>splitV</code> which splits a Tensor along one dimention.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23684">PR-23684</a>: Introduces advanced Indexing and Slicing for Tensors.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23183">PR-23183</a>: Makes arrays differentiable.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23777">PR-23777</a>: Adds <code>_TFCExecuteOp</code> which dispatches an eager op returning a Tensor group. As well, introduces raw operations: <code>saveV2</code> and <code>restoreV2</code> and <code>AnyTensor</code> protocol.</p>
+</li>
+<li>
+<p>The following PR's make APIs use <code>Int</code> instead of <code>Int32</code> or <code>Int64</code>:</p>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/24012">PR-24012</a>: Makes APIs use <code>Int</code> instead of <code>Int32</code>.</li>
+<li><a href="https://github.com/apple/swift/pull/24110">PR-24110</a>: Dataset API uses <code>Int</code> instead of <code>Int64</code>.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/23891">PR-23891</a>: Introduces <code>ConvertibleFromPython</code> protocol which defines conversion from <code>PythonObject</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24042">PR-24042</a>: Standarizes numeric reduction Ops to have squeezing, along and nullary versions.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/70">PR-70</a>: Introduces following improments to APIs:</p>
+<ul>
+<li>Splits Operations into several files.</li>
+<li>Adds the following initializers for <code>Tensor</code>: <code>Tensor(stacking:alongAxis:)</code>, <code>Tensor(concatenating:alongAxis:)</code>, and <code>Tensor(tiling:multiples:)</code> and <code>Tensor(rangeFrom:to:stride:)</code>.</li>
+<li>Introduces following Operations: <code>Tensor.unstack()</code>, <code>Tensor.split(numSplits:alongAxis:)</code>, <code>Tensor.split(sizes:alongAxis:)</code>, <code>sigmoid(_:)</code>.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/105">PR-105</a>: Makes <code>LSTMCell</code> and <code>SimpleRNNCell</code> conform to <code>VectorNumeric</code>. As well, introduces a wrapper layer <code>RNN</code> to this cells: <code>SimpleRNN</code> and <code>LSTM</code> respectively.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/96">PR-96</a>: Introduces usage of <code>call func</code> ( as implemented by <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0253-callable.md">SE-0253</a>). With this change you don't have to use anymore the <code>applied</code> method on Layers, instead you do: <code>layer(input)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/97">PR-97</a>: Introduces the following Recurrent Layers: <code>SimpleRNNCell</code>, <code>LSTMCell</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/95">PR-95</a>: Fixes array out-of-bounds errors you would get occasionally when running Optimizers. This removes as well the <code>scalarType</code> parameter in initializers. As well, allows experimentation by exposing some properties in optimizers: <code>Adam</code>, <code>RMSProp</code>, <code>SGD</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/90">PR-90</a>: Renames <code>GlobalAveragePooling</code> to <code>GlobalAvgPool</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/84">PR-84</a>: Makes APIs use <code>Int</code> instead of <code>Int32</code>.</p>
+</li>
+<li>
+<p>Improvements on Tests:</p>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/82">PR-82</a>: Unit tests for <code>GlobalAvgPool1D</code>, <code>GlobalAvgPool2D</code> and <code>GlobalAvgPool3D</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/89">PR-89</a>: Unit tests for <code>Flatten</code>, <code>Reshape</code> layers.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/108">PR-108</a>: Removes Python code from MNIST example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/89">PR-89</a>: Adds wide ResNet 16 and 28 variants.</p>
+</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-447">TF-448</a>: Improve Tensor type documentation..</li>
+<li><a href="https://bugs.swift.org/browse/TF-447">TF-447</a>: Improve TensorShape printing.</li>
+<li><a href="https://bugs.swift.org/browse/TF-416">TF-416</a>: Produce error upon second usage of <code>PythonLibrary.useVersion</code>.</li>
+<li><a href="https://bugs.swift.org/browse/TF-130">TF-130</a>: Add API to serialize a <code>@convention</code>(tensorflow) function as a graph.</li>
+<li><a href="https://bugs.swift.org/browse/TF-67">TF-67</a>:  BumpPtrAllocating some classes that have SmallBitVector fields.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

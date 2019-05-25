@@ -1,0 +1,83 @@
+<h1>S4TF News - Issue 10, May 19th 2019</h1>
+<p>Welcome to the Issue #10 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/lexfridman">Lex Fridman</a> invited <a href="https://twitter.com/clattner_llvm">Chris Lattner</a> to his <a href="https://www.youtube.com/playlist?list=PLrAXtmErZgOdP_8GztsuKi9nrraNbKKp4">Artificial Intelligence Podcas</a> to talk about LLVM, how compilers work, Tensorflow, Swift for Tensorflow, MLIR among other topics. You can watch/listen the interview on <a href="https://www.youtube.com/watch?v=yCd3CzGSte8">Youtube</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/wellfedwookiee">James Thompson</a> wrote a detailed post on Neural Style Transfer using Swift for Tensorflow. CHeck out his post on <a href="https://medium.com/@build_it_for_fun/neural-style-transfer-with-swift-for-tensorflow-b8544105b854">Medium</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/zaidalyafeai">Zaid Alyafeai</a> shared his implementation of Deep Dream using Swift for Tensorflow. Check out the notebook in <a href="https://colab.research.google.com/github/zaidalyafeai/Swift4TF/blob/master/Swift4TF_DeepDream.ipynb">Colab</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://twitter.com/asparagui">Brett Koonce</a> will give an introduction to Swift for Tensorflow at <a href="http://altconf.com/">AltConf</a> this year.  (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/TjPoz0YCWXo/oVKcQeZLAAAJ">original message</a>).</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24896">PR-24896</a>: Adds ability to inter conformances protocol <code>Differentiable</code> from the parameters and result of a <code>@differentiable</code> function type.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24861">PR-24861</a>: Removes unused code within <code>_ExecutionContext</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24859">PR-24859</a>: Makes <code>Tensor.broadcast(to:)</code> differentiable.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24845">PR-24845</a>: Revamps differentiation transform.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24837">PR-24837</a>: Cleans up <code>@_silgen_name</code> functions from TensorFlow's <code>CompilerRuntime.swift</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24825">PR-24825</a>, <a href="https://github.com/apple/swift/pull/24855">PR-24855</a>: Removes <code>CotangentVector</code> and substitutes it's usages by <code>TangentVector</code>. As well merges <code>__Diferentiable</code> and <code>_Differentiable</code> protocols into <code>Differentiable</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24708">PR-24708</a>: Defines <code>FileSystemProvider</code> within <code>SourceKit</code> so that it can support running in an environment where source files and dependencies are not in a local filesystem.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24775">PR-24775</a>: Makes JVP/VJP methods return a linear map that take/return tangent/cotagent last instead of first.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24761">PR-24761</a>: Introduces <code>AutoDiffIndexSubset</code> which holds parameter indices information to be used by the SIL's AutoDiff infrastructure.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24736">PR-24736</a>: makes <code>Array.DifferentiableView</code> to <code>CustomStringConvertible</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24722">PR-24722</a>: Removes the following:</p>
+<ul>
+<li>Calling convention <code>@convenction(tensorflow)</code>.</li>
+<li>Attribute <code>@TensorFlowGraph</code>.
+. SIL <code>builtin</code>s: <code>tensorflowSend</code> and <code>tensorflowReceive</code>.</li>
+</ul>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p>Bug fixes:</p>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/125">PR-125</a>: Fixes VJPs for <code>maxPooled3D</code> and <code>averagePooled3D</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/119">PR-119</a>: Fixes implementations of Layers: <code>AvgPool3d</code> and <code>Maxpool3d</code>.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/122">PR-122</a>: Substituting usages of <code>Cotangent</code> given that it has been deprecated (<a href="https://github.com/apple/swift/pull/24825">PR-24825</a>).</p>
+</li>
+</ul>
+<h2>Starter bugs</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-416">TF-416</a>: Produce error upon second usage of <code>PythonLibrary.useVersion</code>.</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
