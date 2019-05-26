@@ -2,7 +2,7 @@
 
 This is the list of people I have mentioned in the newsletter:
 
-* [Chris Lattner](https://twitter.com/clattner_llvm?lang=en)
+* [Chris Lattner](https://twitter.com/clattner_llvm)
 * [Mingsheng Hong](https://twitter.com/mingshenghong)
 * [Meghan Kane](https://twitter.com/meghafon)
 * [Richard Wei](https://twitter.com/rxwei)
@@ -23,3 +23,5 @@ This is the list of people I have mentioned in the newsletter:
 * [Vibhutha Kumarage](https://twitter.com/vibhuthasak)
 * [Brennan Saeta](https://twitter.com/bsaeta)
 * [Brett Koonce](https://twitter.com/asparagui)
+* [Laurence Moroney](https://twitter.com/lmoroney)
+* [Hsing Liu](https://github.com/es2mac)
