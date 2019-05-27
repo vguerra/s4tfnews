@@ -1,0 +1,70 @@
+<h1>S4TF News - Issue 11, May 26th 2019</h1>
+<p>Welcome to the Issue #11 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>This week, <a href="https://twitter.com/clattner_llvm">Chris Lattner</a> was a guest on the show <a href="https://www.youtube.com/watch?v=z5M4otA4S3A&amp;list=PLQY2H8rRoyvyOeER8UNF-1zXaCKGLZVog">TensorFlow Meets</a>. He sat together with <a href="https://twitter.com/lmoroney">Laurence Moroney</a> to talk about Swift for TensorFlow. Check out the interview <a href="https://youtu.be/z5M4otA4S3A">online</a>.</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://github.com/es2mac">Hsing Liu</a> shared a hobby project of his, where he uses Swift for TensorFlow to build AI that plays the game Tetris. Check out his progress on his github repo <a href="https://github.com/es2mac/SwiftDigger">here</a>. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/nIVNOJ1RDYA/wcvfBTF7BgAJ">original message</a>)</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25059">PR-25059</a>: Fixes printing of <code>@differentiable</code> functions into <code>.swiftinterface</code> files.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25051">PR-25051</a>: Moves <code>TensorGroup</code> into the standard library.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25054">PR-25054</a>: Specifies needed versions of Bazel required to build with TensorFlow support: between v0.24.1 and v0.25.2 (inclusive).</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25023">PR-25023</a>: Introduces <code>withDevice(named:perform:){}</code> which executes TensorFlow operations of a given closure on the named device.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24976">PR-24976</a>: Converts <code>_AnyTensorHandle</code> from class to protocol and introduces type <code>TFETensorHandle</code> which wraps a C pointer to <code>TensorHandle</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25031">PR-25031</a>: Fixes bug when apply's result is active but arguments are not.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24911">PR-24911</a>: Initiates work on supporting differentiating control flow instuctions. <code>if</code> conditionals are supported.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24966">PR-24966</a>: Revamps infrastructure for TPU supoprt but this time on top of eager execution.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24946">PR-24946</a>: Cleans up <code>Differentiation</code> transform.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24938">PR-24938</a>: More clean-up in TensorFlow Compiler Runtime. Removes TPU support as it was designed to work with GPE. As well, removes <code>enableTPU</code>, <code>enableGPU</code> and <code>enableCPU</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24941">PR-24941</a>: Fixes the issue where no <code>autodiff_function</code> is found when <code>VJPEmitter</code> produces the VJP function from original.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24879">PR-24879</a>: Introduces flag <code>-enable-cxx-interop</code> and adds support for <code>extern &quot;C&quot; {}</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24907">PR-24907</a>: Refactors unbroadcast operations so that it uses on-host axis calculation. This brings a speed-up of 37% when differentiating broadcasting operators, which translates to faster training.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/131">PR-131</a>: Fixes <code>UpSampling3D</code> so that it works for high dimensional Tensors.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/133">PR-133</a>: Moves in <code>Dataset.swift</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/128">PR-128</a>: Adds <code>Conv3D</code> Layer.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
