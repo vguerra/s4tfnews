@@ -1,0 +1,72 @@
+<h1>S4TF News - Issue 12, June 2nd 2019</h1>
+<p>Welcome to the Issue #12 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/max_pechyonkin">Max Pechyonkin</a> wrote about Swift for Tensorflow, specially about the strenghts of Swift as a language for Machine Learning. Find the post in <a href="https://towardsdatascience.com/why-swift-may-be-the-next-big-thing-in-deep-learning-f3f6a638ca72">Medium</a>.</p>
+</li>
+<li>
+<p>An Xcode 10 Development snapshot is now available for you to try out Swift for Tensorflow. Get it <a href="https://storage.googleapis.com/swift-tensorflow-artifacts/releases/v0.3.1/rc1/swift-tensorflow-RELEASE-0.3.1-osx.pkg">here</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://twitter.com/chiefscientist">Alexy Khrabrov</a> posted an invitation to anyone interested in giving a talk about Swift for Tensorflow at <a href="https://www.scale.bythebay.io/">Scale By the Bay</a>. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/gbnAQx7jOH4/b7D7Au6vBAAJ">original message</a>).</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25151">PR-25151</a>: Fixes issues on user-defined derivatives for stored properties. As consequence user-defined derivatives for stored properties are no allowed and a name-correpondence is required between fields in <code>T.TangentVector</code> and <code>T</code>. Kudos to <a href="https://twitter.com/bart_chr">Bart Chrzaszcz</a> for <a href="https://github.com/apple/swift/pull/25151">this great PR write-up</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25176">PR-25176</a>: Refactors code that checks for satisfaction of generic differentiation requirements.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24452">PR-24452</a>: Moves out the module <code>Tensorflow</code> into the <a href="https://github.com/tensorflow/swift-apis">swift-apis repository</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24708">PR-24708</a>: Fixes bug where SourceKit would not work with <code>.swiftinterface</code> files.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25040">PR-25040</a>: Puts in place checks to make sure <code>PythonLibrary.useVersion</code> is not called more than once.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/158">PR-158</a>: Moves in all tests for <code>TensorGroup</code> from <a href="https://github.com/apple/swift/tree/tensorflow">swift repository</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/159">PR-159</a>: Introduces the Layers: <code>GlobalMaxPool1D</code>, <code>GlobalMaxPool2D</code> and <code>GlobalMaxPool3D</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/156">PR-156</a>: Introduces <code>Tensor.gathering</code>.</p>
+</li>
+<li>
+<p>Adding support for the following operations:</p>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/152">PR-152</a>: <code>tile</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/146">PR-146</a>: <code>expm1</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/145">PR-145</a>: <code>log1p</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/144">PR-144</a>: <code>sign</code>.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/141">PR-141</a>: Speeds up Tensor shape/rank operators by using TensorFlow Eager API.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/143">PR-143</a>: Refactors <code>matmul</code> operation so that it uses internally <code>Raw.batchMatMulV2</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/109">PR-109</a>: Moves in the module <code>Tensorflow</code> from the <a href="https://github.com/apple/swift/tree/tensorflow">swift repository</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/102">PR-102</a>: Brakes all code in <code>Layer.swift</code> into different files within a <code>Layers</code> directory.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

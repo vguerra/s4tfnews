@@ -25,3 +25,5 @@ This is the list of people I have mentioned in the newsletter:
 * [Brett Koonce](https://twitter.com/asparagui)
 * [Laurence Moroney](https://twitter.com/lmoroney)
 * [Hsing Liu](https://github.com/es2mac)
+* [Bart Chrzaszcz](https://twitter.com/bart_chr)
+* [Alexy Khrabrov](https://twitter.com/chiefscientist)
