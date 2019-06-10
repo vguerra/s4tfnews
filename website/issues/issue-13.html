@@ -1,0 +1,126 @@
+<h1>S4TF News - Issue 13, June 9th 2019</h1>
+<p>Welcome to the Issue #13 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>Progress on Google Summer of Code 2019 projects:</p>
+<ul>
+<li>
+<p><a href="https://twitter.com/mantis0604">Ayush Agrawal</a> is working on a set of tutorials for Swift for Tensorflow that target beginner and intermediate users. You can find the notebooks he's been working on <a href="https://github.com/Ayush517/S4TF-Tutorials">GitHub</a>. As well, he's sharing the evolution of his project on <a href="https://medium.com/gsoc-19">Medium</a> in case you want to follow closely his progress. (<a href="https://forums.fast.ai/t/swift-for-tensorflow-tutorials-guides/47430?u=vguerra">original post</a>).</p>
+</li>
+<li>
+<p><a href="https://github.com/KarthikRIyer">Karthik Ramesh Iyer</a>'s project is to develop a data visualization library in Swift. His library is called <a href="https://github.com/KarthikRIyer/swiftplot">SwiftPlot</a>. (<a href="https://forums.fast.ai/t/data-visualization-library-in-swift/46995?u=vguerra">original post</a>).</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://twitter.com/rahul_bhalley">Rahul Bhalley</a> has shared his implementation of <a href="https://arxiv.org/abs/1701.07875">Wasserstein GAN</a> in Swift for Tensorflow. Check out his article on <a href="https://towardsdatascience.com/wasserstein-gan-in-swift-for-tensorflow-61b557bd8c63">Medium</a> and the code on <a href="https://github.com/rahulbhalley/swift-for-tensorflow-examples">GitHub</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/DynamicWebPaige">Paige Bailey</a> is now a <a href="https://twitter.com/DynamicWebPaige/status/1134543898007597056">Product Manager for TensorFlow</a> focusing, among other topics, on Swift for TensorFlow.</p>
+</li>
+<li>
+<p>A new Xcode 10 Development snapshot is now available for you to try out Swift for Tensorflow. Get it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2019-06-06-a-osx.pkg">here</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://twitter.com/DynamicWebPaige">Paige Bailey</a> has announced the founding of Swift SIG: a <a href="https://github.com/tensorflow/community/blob/master/sigs/swift/CHARTER.md">Swift for Tensorflow Special Interest Group</a>. The first open meeting will take place this June 14th @ 4 pm UTC. You can find the agenda <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit">here</a>. In case you wonder what a SIG is, have a look <a href="https://www.tensorflow.org/community/sig_playbook">here</a> and <a href="https://medium.com/tensorflow/contributing-to-tensorflow-sigs-rfcs-testing-and-docs-1c0f8240166c">here</a> .(<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/MskgzFbItaI/WSX-p3vxBAAJ">original message</a>).</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p>Partial fixes on memory leaks:</p>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/25300">PR-25300</a>: Adjoint memory leak.</li>
+<li><a href="https://github.com/apple/swift/pull/25294">PR-25294</a>: Control flow automatic differentiation memory leak.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25268">PR-25268</a>: Optimizes adjoint buffers for address projections as they become projections into their adjoint base buffer.</p>
+</li>
+<li>
+<p>Adding <code>linear</code> argument to attribues <code>@differentiable</code> and <code>@differentiating</code>:</p>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/25269">PR-25269</a>: Reflects whether functions are marked as linear or not. Serializes/Desrializes the argument.</li>
+<li><a href="https://github.com/apple/swift/pull/25228">PR-25228</a>, <a href="https://github.com/apple/swift/pull/25257">PR-25257</a>: Add ability to handle <code>linear</code> argument for <code>@differentiable</code> attribute when parsing.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25273">PR-25273</a>: Enables control flow automatic-differentiation by default.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25255">PR-25255</a>: Unifies block generation logic as handling entry adjoint block  generation in automatic-differentiation for control flow does not differ much from the general one.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25057">PR-25057</a>: Adds support for differentiation of conditionals, allowing to differentiate nested conditionals, recursion and <code>var</code> allocations of Tuples and Structs.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25235">PR-25235</a>: Following decisions on naming conventions for <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0253-callable.md">SE-0253</a> this replaces <code>func call</code> with <code>func callAsFunction</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25239">PR-25239</a>: Removes all TensorFlow related tests as they have been migrated to <a href="https://github.com/tensorflow/swift-apis">swift-apis repository</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25238">PR-25238</a>: Removes <code>TensorGroup</code> tests for derived conformances as they have been moved already to <a href="https://github.com/tensorflow/swift-apis">swift-apis repository</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p>Work on Hinge losses:</p>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/187">PR-187</a>: Adding Squared Hinge Loss.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/188">PR-188</a>: Adding Categorical Hinge Loss function.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/185">PR-185</a>: Adding Hinge Loss function.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/182">PR-182</a>: Adds <code>meanAbsoluteError</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/173">PR-173</a>: Introduces <code>LazyTensor</code> and <code>LazyTensorOperation</code> types.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/168">PR-168</a>: Refactors and renames convolution and poolong operators to improve discoverability.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/176">PR-176</a>: Converts <code>copy(of:)</code> to an extention method of <code>TensorHandle</code> named <code>makeCopy()</code> to avoid function lookup errors.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/172">PR-172</a>: Following decisions on naming conventions for <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0253-callable.md">SE-0253</a> this replaces <code>func call</code> with <code>func callAsFunction</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/169">PR-169</a>: Enables compatibility with TPUs by changing seed type from <code>Int64</code> to <code>Int32</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/165">PR-165</a>: Introduces new requirements to <code>TensorArrayProtocol</code> and <code>TensorGroup</code> to use <code>_AnyTensorHandle</code>.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform <code>Optional</code> to <code>Differentiable</code>.</li>
+</ul>
+<h4>TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

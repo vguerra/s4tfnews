@@ -27,3 +27,7 @@ This is the list of people I have mentioned in the newsletter:
 * [Hsing Liu](https://github.com/es2mac)
 * [Bart Chrzaszcz](https://twitter.com/bart_chr)
 * [Alexy Khrabrov](https://twitter.com/chiefscientist)
+* [Rahul Bhalley](https://twitter.com/rahul_bhalley)
+* [Paige Bailey](https://twitter.com/DynamicWebPaige)
+* [Ayush Agrawal](https://twitter.com/mantis0604)
+* [Karthik Ramesh Iyer](https://github.com/KarthikRIyer)
