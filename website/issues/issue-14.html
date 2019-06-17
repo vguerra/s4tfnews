@@ -1,0 +1,165 @@
+<h1>S4TF News - Issue 14, June 16th 2019</h1>
+<p>Welcome to the Issue #14 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>The first S4TF open design meeting took place last Friday 14th of June, 2019. A total of 100 people joined the meeting ( 94 of them did it remotely 👩‍💻👨🏽‍💻). You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>. As well, the recording is available <a href="https://drive.google.com/file/d/17zkAakpgAXmsZSFBS4XYCi5zwBv-CQVQ/view">here</a>. During this meeting <a href="https://twitter.com/rxwei">Richard Wei</a> presented <a href="https://t.co/DuNRtQgHU2">the design document for automatic differentiation within Swift</a>. The next open meeting is scheduled for this coming Friday 21st of June, 2019 @ 4 pm UTC. This time the design discussion will be around <em>Lazy Tensors</em>. Please consider joining!</p>
+</li>
+<li>
+<p><a href="https://github.com/param087">Param Bhavsar</a> has <a href="https://forums.fast.ai/t/machine-learning-library-in-swift/47866?u=vguerra">shared</a> the GSoC'19 project he and Victor Antony will be working on: Adding traditional Machine Learning algorithms to Swift for Tensorflow. You can follow the evolution of their project <a href="https://github.com/param087/swiftML">here</a>.</p>
+</li>
+<li>
+<p>Back in May 18th, <a href="http://www.marcrasi.com/">Marc Rasi</a> shared in the Swift forums a proposal for having <a href="https://forums.swift.org/t/compile-time-constant-expressions-for-swift/12879">Compile-Time Constant Expressions for Swift</a> which would enable other features in the language that need compile-time execution. The ability to have compile-time constant expressions might come handy in some places within the Swift for Tensorflow project (see proposal) . You can find the proposal draft <a href="https://gist.github.com/marcrasi/b0da27a45bb9925b3387b916e2797789">here</a>.</p>
+</li>
+<li>
+<p>A new Xcode 10 Development snapshot is now available for you to try out Swift for Tensorflow. Get it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2019-06-13-a-osx.pkg">here</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25500">PR-25500</a>: Introduces <code>ElementaryFunctions</code> protocol and derives conformances to it for <code>struct</code> types.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25495">PR-25495</a>: Fixes a crash on <code>AdditiveArithmetic</code> derived conformances  due to missing memberwise initializers.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24786">PR-24786</a>: Makes SIMD vectors differentiable.</p>
+</li>
+<li>
+<p><a href="">PR-25437</a>: Changes <code>Differentiable.moved(along:)</code> to <code>mutating func move(along:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25325">PR-25325</a>: Adds initial support to <code>@differentiable(linear)</code> types.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25381">PR-25381</a>: Substitutes <code>VectorProtocol</code> scalar multiplication operators with <code>VectorProtocol.scaled(by:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25374">PR-25374</a>: Renames Rename <code>VectorProtocol.Scalar</code> to <code>VectorSpaceScalar</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25371">PR-25371</a>: Renames protocol <code>VectorNumeric</code> to <code>VectorProtocol</code>. Removes as well <code>ShapedVectorNumeric</code> protocol.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25368">PR-25368</a>: Fixes diagnostics on fulfilled <code>@differentiable</code> attribute.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25339">PR-25339</a>: Improves importing nested types and namespaces for C++ interoperability.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25324">PR-25324</a>: Fixes conformance checking in <code>@differentiable</code> attribute's <code>wrt:</code> parameter.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25277">PR-25277</a>: Adds diagnostic for when in <code>@differentiable</code> attribute, <code>linear</code> is specified together with and <code>vjp:</code> or <code>jvp:</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25293">PR-25293</a>: Improves compiler diagnostics in case of duplicated attribute <code>@differentiable</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p>Introduced Losses and Error functions:</p>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/240">PR-240</a>: Introduces Cosine Distance <code>cosineDistance(x:,y:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/228">PR-228</a>: Introduces Mean Absolute Percentage error: <code>meanAbsolutePercentageError(predicted:,expected:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/233">PR-233</a>: Introduces Cosine Similarity <code>cosineSimilarity(predicted:expected:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/226">PR-226</a>: Introduces Kullback-Leibler divergence <code>kullbackLeiblerDivergence(predicted:,expected:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/231">PR-231</a>: Introduces Adding L1 &amp; L2 Losses: <code>l1Loss(predicted:expected:)</code>, <code>l2Loss(predicted:expected:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/221">PR-221</a>: Introduces <code>poissonLoss(predicted:expected:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/193">PR-193</a>: Introduces <code>meanSquaredLogarithmicError(predicted:expected:)</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/225">PR-225</a>: Introduces <code>softplus</code> and <code>softsign</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/198">PR-198</a>: Introduces <code>clipped(min: Tensor, max: Tensor)</code> for <code>Tensor</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/200">PR-200</a>: Makes <code>Tensor</code> conform to <code>ElementaryFunctions</code>.</p>
+</li>
+<li>
+<p>Applying changes and renamings:</p>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/236">PR-236</a>: Applying change of <code>Differentiable.moved(along:)</code> to <code>move(along:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/207">PR-207</a>: Applies renaming of <code>VectorProtocol.Scalar</code> to <code>VectorSpaceScalar</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/205">PR-205</a>: Applies renaming of <code>VectorNumeric</code> to <code>VectorProtocol</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/214">PR-214</a>: Adds the following <code>Tensor</code> operators: <code>acos</code>, <code>asin</code>, <code>atan</code>, <code>acosh</code>, <code>asinh</code>, <code>atanh</code>,
+<code>log2</code>, <code>log10</code>, <code>exp2</code>, <code>exp10</code>, <code>pow(Tensor, Int)</code>, <code>root(Tensor, Int)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/203">PR-203</a>: Adds <code>LazyTensor.forEachOperation</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/192">PR-192</a>: Introduces <code>AdaGrad</code> optimizer.</p>
+</li>
+<li>
+<p>Improvements to pretty printing of <code>LazyTensorOperation</code>:</p>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/206">PR-206</a>: Print <code>LazyTensorOperation</code> in the form &quot;%id = op<a href="...">...</a>&quot;.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/196">PR-196</a>: Handling concrete values when pretty-priting <code>LazyTensorOperation</code>s.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/190">PR-190</a>: Adds ability to track the liveness of <code>LazyTensor</code>s.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/184">PR-184</a>: Adds derivative for <code>padded(forSizes:with:)</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow Bindings</h4>
+<ul>
+<li>This repository has been marked as deprecated as Bindings have been moved to tensorflow/swift-apis](https://github.com/tensorflow/swift-apis/tree/master/Sources/TensorFlow/Bindings) in this <a href="https://github.com/tensorflow/swift-apis/pull/109">PR-109</a>.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform <code>Optional</code> to <code>Differentiable</code>.</li>
+</ul>
+<h4>TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

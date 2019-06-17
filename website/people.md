@@ -31,3 +31,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Paige Bailey](https://twitter.com/DynamicWebPaige)
 * [Ayush Agrawal](https://twitter.com/mantis0604)
 * [Karthik Ramesh Iyer](https://github.com/KarthikRIyer)
+* [Param Bhavsar](https://github.com/param087)
