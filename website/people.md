@@ -32,3 +32,7 @@ This is the list of people I have mentioned in the newsletter:
 * [Ayush Agrawal](https://twitter.com/mantis0604)
 * [Karthik Ramesh Iyer](https://github.com/KarthikRIyer)
 * [Param Bhavsar](https://github.com/param087)
+* [Gogul Balakrishnan](http://pages.cs.wisc.edu/~bgogul/)
+* [Tanmay Bakshi](https://twitter.com/tajymany)
+* [Thom Mackey](https://twitter.com/thom_mackey)
+* [John D. Pope](http://www.linkedin.com/in/jdpope)

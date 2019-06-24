@@ -1,0 +1,152 @@
+<h1>S4TF News - Issue 15, June 23rd 2019</h1>
+<p>Welcome to the Issue #15 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>The second S4TF open design meeting took place last Friday 21st of June, 2019. Among the things discussed we have:</p>
+<ul>
+<li>
+<p>Upcoming release of Swift for Tensorflow v0.4 will be announced this week.</p>
+</li>
+<li>
+<p><a href="http://pages.cs.wisc.edu/~bgogul/">Gogul Balakrishnan</a> leaded the discussion on <a href="https://docs.google.com/document/d/1sb7t0FfbEl9KJkX4zrW358AkLH0TOTuLns0fPPh9JjU/edit">design for Lazy Tensors</a>.</p>
+</li>
+<li>
+<p>There is a <a href="https://docs.google.com/document/d/1dB3CiDRhVDTIcJjw4ClwJ9eTvIT0zVGPRsD_RJyaM5I/edit#heading=h.313ep4luyxd1">migration guide</a> to help you out when moving from v0.3 to v0.4, to which you can contribute as well 🤓.</p>
+</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+<li>
+<p>Swift for Tensorflow talks:</p>
+<ul>
+<li>
+<p><a href="https://twitter.com/tajymany">Tanmay Bakshi</a> gave a talk at the <a href="https://www.meetup.com/Advanced-Spark-and-TensorFlow-Meetup/">Advanced Spark and Tensorflow meetup</a> about S4TF. He touches on it's strenghts and shows off some code examples (which you can find on <a href="https://github.com/tanmayb123/Swift4TensorFlow-Examples">github</a>). You can watch the recording on <a href="https://youtu.be/etxIKXJo3f4">youtube</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/thom_mackey">Thom Mackey</a> spoke at <a href="https://www.melbournecocoaheads.com/">Melbourne CocoHeads meetup</a> about S4TF. You can watch the recording on <a href="https://youtu.be/zJO9Jij0O9o">youtube</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://twitter.com/rxwei">Richard Wei</a> has posted a <a href="https://forums.swift.org/t/pre-pitch-swift-differentiable-programming-design-overview/25992">pre-pitch on the Swift Evolution</a> forums presenitng the design overview for <a href="https://docs.google.com/document/d/1bPepWLfRQa6CtXqKA8CDQ87uZHixNav-TFjLSisuKag/edit?usp=sharing">Differentiable Programming in Swift</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/jeremyphoward">Jeremy Howard</a> announced during the lasT S4TF Design meeting that a new <a href="http://fast.ai">fast.ai</a> course <a href="https://twitter.com/jeremyphoward/status/1142104776093495296">will be released on June 28th</a> that is called: &quot;Deep Learning from the Foundations&quot;, which includes lessons using Swift for Tensorflow (co-taught w/<a href="https://twitter.com/clattner_llvm">Chris Lattner</a>) 🍾👏🏼.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="http://www.linkedin.com/in/jdpope">John D. Pope</a> shared a <a href="https://github.com/johndpope/s4tf-style-transfer">github repository</a> containing an Xcode project implementing Neural Style Transfer in S4TF (coming from this <a href="https://mc.ai/neural-style-transfer-with-swift-for-tensorflow/">post</a>). (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/O9a9-BPzSF0/9ruehxVeCQAJ">original message</a>).</p>
+</li>
+<li>
+<p><a href="https://twitter.com/mantis0604">Ayush Agrawal</a> asks how to install OpenCV4 on Google Colab when it is a dependency for your code. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/qZZuBfJTVsg/2HpKkc5nCAAJ">original message</a>).</p>
+</li>
+<li>
+<p><code>rex-remind</code> asked on the mailing list for recommendations on the topic of Differential Geometry. If you are curious about this topic check out the recommendations. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/G_QkWhYiAjc/LJkqHGooBQAJ">original message</a>).</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25688">PR-25688</a>: Enforces <code>@differentiable</code> closure converstion to be applied only when from-expression is a literal closure expression or a reference to a <code>func</code> declaration.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25594">PR-25594</a>: Allows you to reference parameters by index w.r.t order of appearence in original function in <code>wrt:</code> argument of attributes  <code>@differentiating</code> and <code>@differentiable</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25558">PR-25558</a>: Introduces differentiation for loops.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25552">PR-25552</a>: Adds top-level <code>withoutDerivative(at:in:)</code> to support generic algorithms that are conditionally differentiable.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25525">PR-25525</a>: Adds broadcasting methods <code>adding(_:)</code> and <code>substracting(_:)</code> to protocol <code>VectorProtocol</code> which are compiler-derivable.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25509">PR-25509</a>: Adds support for diferentiation of <code>switch_enum</code> <a href="https://github.com/apple/swift/blob/master/docs/SIL.rst#terminators">terminator</a>. Differentiation of active enum values is not yet supported though.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/150">PR-150</a>: Introduces <code>logSumExp</code> which is more numerically stable than <code>log(exp(self).sum(...))</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/278">PR-278</a>: Improves error message for when computing gradient of a function does not return a scalar.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/275">PR-275</a>: Adds support for dilated <code>Conv1D</code> and <code>Conv2D</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/272">PR-272</a>: Makes 'Tensor.gathering' generic over <code>Int32</code> and <code>Int64</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/157">PR-157</a>: Adds support for 'Tensor.batchGathering(atIndices:)'.</p>
+</li>
+<li>
+<p>Added activation functions:</p>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/268">PR-268</a>: Adds Gaussian Error Linear Unit (GELU) activation function <code>gelu(_:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/260">PR-260</a>: Adds leaky ReLU activation function <code>leakyRelu(_:alpha:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/252">PR-252</a>: Adds Exponential Linear Unit activation function <code>elu(_:)</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/264">PR-264</a>: Introduces contribution guidelines.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/257">PR-257</a>: Adds <code>Embedding</code> layer.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/202">PR-202</a>: Extract traces for evaluating a <code>LazyTensorOperation</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/197">PR-197</a>: Introduces Glorot normal initialization for <code>Tensor</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/251">PR-251</a>: Adds implementations for <code>adding(_:)</code> and <code>subtracting(_:)</code> of <code>VectorProtocol</code> protocol.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/241">PR-241</a>: Adds 2D depthwise convolution layer <code>DepthwiseConv2D</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/227">PR-227</a>: Adds Logarithm-cosine loss <code>logCoshLoss(predicted:,expected:)</code>.</p>
+</li>
+</ul>
+<h3>Swift Jupyter</h3>
+<p><a href="https://github.com/google/swift-jupyter/pull/66">PR-66</a>: Introduces <code>%system</code> directive to install libraries before swift packages.</p>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform <code>Optional</code> to <code>Differentiable</code>.</li>
+</ul>
+<h4>TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
