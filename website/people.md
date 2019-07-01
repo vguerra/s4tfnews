@@ -36,3 +36,6 @@ This is the list of people I have mentioned in the newsletter:
 * [Tanmay Bakshi](https://twitter.com/tajymany)
 * [Thom Mackey](https://twitter.com/thom_mackey)
 * [John D. Pope](http://www.linkedin.com/in/jdpope)
+* [Dave Fenrnandes](https://github.com/dave-fernandes)
+* [Benedikt Herudek](https://twitter.com/Benudek)
+* [Sanyam Bhutani](https://twitter.com/bhutanisanyam1)
