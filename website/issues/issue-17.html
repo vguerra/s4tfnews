@@ -1,0 +1,111 @@
+<h1>S4TF News - Issue 17, July 7th 2019</h1>
+<p>Welcome to the Issue #17 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="http://brettkoonce.com/">Brett Koonce</a> was at <a href="http://altconf.com/">AltConf 2019</a> and gave an introductory talk about Swift for Tensorflow. Check out the <a href="http://altconf.com/">recording</a><a href="https://youtu.be/mo3fSb620og"></a>. 📺</p>
+</li>
+<li>
+<p><a href="https://twitter.com/headinthebox">Erik Meijer</a> <a href="https://twitter.com/headinthebox/status/1144650544633397250">shared the slides</a> from the Probabilistic and Differentiable Programming Summit where <a href="https://twitter.com/dancherp">Dan Zheng</a> and <a href="https://twitter.com/rxwei">Richard Wei</a> had the opportunity to talk about <a href="https://drive.google.com/file/d/1EESLI-HaAUb6qbOBH_VN4AX3w4r66f1l/view">Differential Programming in Swift</a>. 🤓</p>
+</li>
+<li>
+<p><a href="https://github.com/bhansconnect">Brendan Hansknecht</a> created a nice library in Swift which allows you to measure execution time of your code, inspired by IPython timeit functionality. It's called <a href="https://github.com/bhansconnect/SwiftTimeit">SwiftTimeIt</a>. (<a href="https://forums.fast.ai/t/timeit-built-in-swift/49401?u=vguerra">original post</a>). ⏰</p>
+</li>
+<li>
+<p><a href="https://twitter.com/mantis0604">Ayush Agrawal</a> shares on <a href="https://medium.com/gsoc-19/phase-1-completed-4d2d458c925b">Medium</a> his progress on his GSoC'19 project. Congratulations to him on successfuly completing the 1st Phase. 👏🏼🎊</p>
+</li>
+<li>
+<p>Under the umbrella of the MLIR project, two exciting announcements:</p>
+<ul>
+<li>The Tensorflow components of MLIR were released in the wild.</li>
+<li>The <a href="https://github.com/tensorflow/mlir">MLIR project</a> is now ready to accept your contributions.</li>
+</ul>
+<p>(<a href="https://groups.google.com/a/tensorflow.org/forum/m/?utm_medium=email&amp;utm_source=footer#!topic/mlir/xe522DD4ZYA">original post</a>).</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25895"></a>: Adds support for differentiating <code>Array</code> literals initialization.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25951">PR-25951</a>: Renames <code>AdjointEmitter</code> class to <code>PullbackEmitter</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25684">PR-25684</a>: Adds type-checking for top-level functions and methods annotated with <code>@transposing</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25924">PR-25924</a>: Fixes compiler crash when differentiating a function that invokes a differentiable initializer.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25914">PR-25914</a>: Introduces support for <code>Differentiable</code> conformance derivation for <code>class</code> types.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p>Bug fixes for <code>_vjpConv2DBackpropInput</code>:</p>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/333">PR-333</a>: Fixes error on <code>Incompatible shapes</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/331">PR-331</a>: Fixes bug of incorrectly passing the shape argument to <code>conv2DBackpropFilter</code> as the filterSizes argument instead of passing the filter shape,</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Improvements to random seed generation:</p>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/328">PR-328</a>: Improves generation of default random seeds when in multi-process settings.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/320">PR-320</a>.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/327">PR-327</a>: Pairs <code>Tensor.batchGathering(atIndices:)</code> implementation with it's Python counterpart, supporting variable number of batch dimensions and an axis to gather along.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/324">PR-324</a>: Teaches <code>Dense</code> <code>Layer</code> to use the batch variant of <code>matmul</code> when rank of <code>weight</code> is equal 3.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/326">PR-326</a>: Allows composable <code>Layer</code>s by introducing <code>Sequential</code> <code>Layer</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/322">PR-322</a>: Makes all <code>Layer</code>'s tangent vector conform to <code>VectorProtocol &amp; ElementaryFunctions &amp; PointwiseMultiplicative</code>. Introduces as well <code>ParameterLessLayer</code> protocol.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/323">PR-323</a>: Renames <code>LazyTensor</code> to <code>LazyTensorHandle</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/319">PR-319</a>: Standarizes initialization of <code>Layer</code>'s parameters introducing <code>typealias</code>'s: <code>ParameterInitialier</code> and <code>Activation</code>.</p>
+</li>
+<li>
+<p><a href="http://github.com/tensorflow/swift-apis/pull/321">PR-321</a>: Improves documentation for convolutional <code>Layer</code>s.</p>
+</li>
+<li>
+<p><a href="http://github.com/tensorflow/swift-apis/pull/312">PR-312</a>: Introduces orthogonal initializer for <code>Tensor</code>s.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

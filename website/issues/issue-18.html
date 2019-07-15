@@ -1,0 +1,97 @@
+<h1>S4TF News - Issue 18, July 14th 2019</h1>
+<p>Welcome to the Issue #18 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>Release candidate #2 of Swift for Tensorflow v0.4 is now available. Grab the toolchain from <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#releases">here</a> or give it a try in <a href="https://github.com/tensorflow/swift#tutorials-">Google Colab</a>.</p>
+</li>
+<li>
+<p>This past Wednesday, July 10th 2019, the first meeting of the <a href="https://connpass.com/event/138112/">Swift for Tensorflow Tokyo meetup</a> took place:</p>
+<ul>
+<li><a href="https://twitter.com/omochimetaru">omochimetaru</a> gave an <a href="https://speakerdeck.com/omochi/swift-for-tensorflow-is-a-completely-new-paradigm-for-machine-learning">introductory talk about S4TF</a>.</li>
+<li><a href="https://twitter.com/eugene_burmako">Eugene Burmako</a>, from the Google AI team, was there to give an overview of Tensorflow.</li>
+<li><a href="https://twitter.com/crcrpar">Masaki Kozuki</a> talked about MLIR and even wrote a <a href="https://medium.com/@crcrpar/swift-for-tensorflow-meetup-in-tokyo-66a27904d9d1">summary of this 1st meetup</a>.</li>
+</ul>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26133/files">PR-</a>: Fixes compiler bug due to <code>VJPEmitter</code>'s <code>SubstitutionMap</code> not using the VJP's generic signature.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26113">PR-26113</a>: Prevents to specify <code>jvp:</code> or <code>vjp</code> for <code>@differentiable</code> attribute on protocl requirement.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25974">PR-25974</a>: Allows conditional differentiability on <code>Protocol</code> requirements.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26023">PR-26023</a>: Introduces <code>@differentiable</code> versions of <code>Array.map</code> and <code>Array.reduce</code> called <code>Arrray.differentiableMap</code> and <code>differentiableReduce</code> respectively.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25954">PR-25954</a>: Introduces a <code>JVPEmitter</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/25967">PR-25967</a>: Fixes memory leaks during differentiation.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/360">PR-360</a>: Adds <code>@differentiable</code> attribute for overloads of <code>min(_:_:)</code> and <code>max(_:_:)</code>.</p>
+</li>
+<li>
+<p>Introduction of new the following operations for <code>Tensors</code>:</p>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/358">PR-358</a>: Adds <code>cumulativeProduct(alongAxis:exclusive:reverse:)</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/353">PR-353</a>: Adds <code>cumulativeSum(alongAxis:exclusive:reverse:)</code>.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/354">PR-354</a>, <a href="https://github.com/tensorflow/swift-apis/pull/355">PR-355</a>: Introuces support for <code>Tensor</code> moments. As consequence a custom VJP for batch normalization is not needed.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/350">PR-350</a>: Fixes bug on computation of <code>rsqrt</code>'s gradient (<code>_vjpRsqrt</code>).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/347">PR-347</a>: Makes <code>Array</code> and <code>Array.DifferentiableView</code> conform to aggregate math protocols and collection protocols when appropiate.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/341">PR-341</a>: Fixes bug on computation of <code>sigmoid</code>'s gradient (<code>_vjpSigmoid</code>).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/340">PR-340</a>: Introduces <code>typealias</code> <code>TensorflowSeed</code> to standarize usage of seeds.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/339">PR-339</a>: Adds <code>sha1</code> hashing algorithm as an extention of <code>Array&lt;Int8&gt;</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/336">PR-336</a>: Preconditions initializer <code>init(arrayLiteral:)</code> to reject initializations with no elements. This applies to <code>ShapedArraySlice</code>, <code>ShapedArray</code> and <code>Tensor</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/334">PR-334</a>: Bug fix on initialization of <code>TransposedConv2D</code> Layer.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
