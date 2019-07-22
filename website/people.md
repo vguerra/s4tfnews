@@ -45,3 +45,6 @@ This is the list of people I have mentioned in the newsletter:
 * [Masaki Kozuki](https://twitter.com/crcrpar)
 * [Eugene Burmako](https://twitter.com/eugene_burmako)
 * [omochimetaru](https://twitter.com/omochimetaru)
+* [Cristian Garcia](https://github.com/cgarciae)
+
+* [Slawek Smyl](https://twitter.com/slaweksmyl)
