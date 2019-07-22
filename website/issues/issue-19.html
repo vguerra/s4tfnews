@@ -1,0 +1,89 @@
+<h1>S4TF News - Issue 19, July 21st 2019</h1>
+<p>Welcome to the Issue #19 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li><a href="https://twitter.com/jeremyphoward">Jeremy Howard</a> has written <a href="https://github.com/jph00/SwiftyBPE">SwiftBPE</a> which is a Swift wrapper for the C++ implementation of <a href="https://arxiv.org/abs/1508.07909">Neural Machine Translation of Rare Words with Subword Units</a> ( called <a href="https://github.com/glample/fastBPE">fastBPE</a>.</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/slaweksmyl">Slawek Smyl</a> started a discussion asking whether Swift for Tensorflow would allow multithreaded learning. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/OzZu4zq6wtk/2FnBcxaSEgAJ">original message</a>).</p>
+</li>
+<li>
+<p><a href="https://github.com/cgarciae">Cristian Garcia</a> has created a data processing library written in Swift, called <a href="https://github.com/cgarciae/Stream">Stream</a>, that you can use during pre-processing of your data. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/LF8p76VprsE/EEtEnjP3AwAJ">original message</a>).</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26242">PR-26209</a>: Refactors memory managenment during differentiation, having the nice side effect of eliminating memory leaks that have been reported through various channles. Resolves <a href="https://bugs.swift.org/browse/TF-621">TF-621</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26242">PR-26242</a>: Fixes memory leak on closure capturing. Resolves <a href="https://bugs.swift.org/browse/TF-550">TF-550</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26232">PR-26232</a>: Exposes forward mode Automatic Differentiation functions.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26226">PR-26226</a>: Improves leak-checking logic within <code>testWithLeakChecking</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26211">PR-26211</a>: Cleans up zeros emitted when differentiating a <code>store</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26202">PR-26202</a>: Fixes bug during parsing of SIL <code>[differentiable]</code> attributes. Resolving <a href="https://bugs.swift.org/browse/TF-656">TF-656</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26179">PR-26179</a>: Improves <code>@differentiable</code> attribute diagnostic messages and attribute printing.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26173">PR-26173</a>, <a href="https://github.com/apple/swift/pull/26183">PR-26183</a>: Rename adjoint function to pullback in the code base.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/378">PR-378</a>: Marks all parameters of VJP's initializers as <code>__owned</code> as workaround for <a href="https://bugs.swift.org/browse/TF-667">TF-667</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/375">PR-375</a>: Replaces usage of <code>TFE_OpAddInputList</code> by multiple calls to <code>TFE_OpAddInput</code> due to bogus implementation of the former.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/372">PR-372</a>: Introduces <code>LazyTensorOperationsTracker</code> which tracks instances of <code>LazyTensorOperation</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/370">PR-370</a>: Extracts <code>DeviceScopes</code> out into it's own structure.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/366">PR-366</a>, <a href="https://github.com/tensorflow/swift-apis/pull/368">PR-368</a>, <a href="https://github.com/tensorflow/swift-apis/pull/369">PR-69</a>: Make  <code>pow(_:_:)</code>, <code>root(_:_:)</code> and all <code>Tensor</code> functions conforming to <code>ElemntaryFunctions</code> <code>@differentiable</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/348">PR-348</a>: Introduces <code>Tensor.isAlmostEqual(to:tolerance:)</code> and renames <code>Tensor.elementsApproximatelyEqual(_:tolerance:)</code> to <code>Tensor.elementsAlmostEqual(_:tolerance:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/361">PR-361</a>: Introduces <code>Tensor.clipped(min:max:)</code>.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
