@@ -1,0 +1,154 @@
+<h1>S4TF News - Issue 20, July 28th 2019</h1>
+<p>Welcome to the Issue #20 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>The 4th release candidate of Swift for Tensorflow v0.4 is now available. Feel free to try it out in Colab or download a pre-built pacakge from <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#releases">here</a>.</p>
+</li>
+<li>
+<p>On friday 26th of July, the 4th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li>
+<p><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> presented the work that has been done on <a href="https://docs.google.com/presentation/d/1ux8-wmFBg-K9GHK-5zwIkEHPI8t0drAF7-OcQo4Zma0/edit#slide=id.p"><code>Sequential</code> and <code>Embedding Layers</code></a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/bradlarson">Brad Larson</a> talked about the plans on refactoring <a href="http://github.com/tensorflow/swift-models">swift-models</a> repository. Find the overview of the plan <a href="https://docs.google.com/document/d/1eIFrogM7HYn-hIMvrVcoOGjC15KCxDEyn60GNX1_DJI/edit#heading=h.2kwalj5sazl4">here</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/pschuh">Parker Schuh</a> leaded the discussion on <a href="https://docs.google.com/document/d/12AeCyY7pjRrzuQFWK0QLpjjDHkNInUfvHCwtEgF4lEM/edit?usp=sharing">C++ Interoperability</a> and the progress that has been done on the topic. He shared an example showcasing how to enable C++ Interoperability ( see below in the mailing list section).</p>
+</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/julien_c">Julien Chaumond</a> shared on <a href="https://twitter.com/julien_c/status/1154771974213816321">twitter</a> the port, he and <a href="https://twitter.com/LysandreJik">Lysandre</a> did, of OpenAI's GPT-2 to run on-device (using Swift and CoreML, not S4TF but still cool). Check out the <a href="https://github.com/huggingface/swift-coreml-transformers">Github repo</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/eaplatanios">Anthony Platanios</a>.  announced a nice list of packages he's been working on for Reinforcement Learning using Swift for Tensorflow:</p>
+<ul>
+<li><a href="https://github.com/eaplatanios/swift-rl">swift-rl</a>: Reinforcement Learning library with support for environments (e.g. OpenAI Gym) and RL Algorithms.</li>
+<li><a href="https://github.com/eaplatanios/swift-ale">swift-ale</a>: Interface to the <a href="https://github.com/mgbellemare/Arcade-Learning-Environment">Atari Learning Environment</a>.</li>
+<li><a href="https://github.com/eaplatanios/swift-retro">swift-retro</a>: Interface to Gym Retro providing a swift-rl environment for Atari, Sega, etc.</li>
+</ul>
+<p>(<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/40pFeHncFX0/TEc_zkTDBQAJ">original message</a>)</p>
+</li>
+<li>
+<p><a href="https://github.com/pschuh">Parker Schuh</a> shared an example showcasing the amazing work that has been done on C++ Interoperability for Swift. Grab the sample from <a href="https://github.com/pschuh/cpp_example">Github</a>. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/F8DDQBxi7yE/DkqWKNbiBQAJ">original message</a>)</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26373">PR-26373</a>: Moves utilities to check for memory leaks from tests in <code>AutoDiff/leakchecking.swift</code> to <code>DifferentiableUnittests</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26355">PR-26355</a>: Fixes all memory leaks in differentiation of control flow. Resolves <a href="https://bugs.swift.org/browse/TF-552">TF-552</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26345">PR-26345</a>: Fixes two potential issues: usage of freed memory and a memory leak.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26313">PR-26313</a>: Fixes unexpected compilation error when differentiating protocol requirements with multiple <code>@differentiable</code> attributes. Resolves <a href="https://bugs.swift.org/browse/TF-676">TF-676</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26050">PR-26050</a>: Enables differentiation of class's methods. Reslves (<a href="https://bugs.swift.org/browse/TF-631">TF-631</a>).</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26292">PR-26292</a>: Fixes compiler crash when generating param subset thunk for a partially-applied function. Adds as well diagnostics for differentiation of direct method references. <a href="https://bugs.swift.org/browse/TF-675">TF-675.</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/396">PR-396</a>: Improves messages on deprecated funtions by adding migration instructions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/391">PR-391</a>: Enables usage of control flow AD in <code>Layer</code>s: <code>BatchNorm</code> and <code>Dropout</code>. Introduces as well utility <code>withTensorLeakChecking { ... }</code> for checking memory leaks. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/389">#389</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/346">PR-346</a>: Introduces the <code>Module</code> protocol, which is equivalent to <code>Layer</code> before this PR but with no contraints on <code>Input</code>. <code>Layer</code> protocol now conforms to newly introduced <code>Module</code>. As well, <code>Embedding</code> now conforms to <code>Module</code> and <code>Sequential</code> has been adapted to work with both <code>Module</code>s and <code>Layer</code>s ( with the former restricted to appear only at the beginning of the chain).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/356">PR-356</a>: Introduces the <code>reduction</code> parameter for Losses which is a Reduction to be applied on the element-wise loss values. As well, makes some instances of <code>Tensor.max()</code> and <code>Tensor.min()</code> <code>@differentiable</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/387">PR-387</a>: Makes <code>useLazyTensor</code> a Thread-local state.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/384">PR-384</a>: Uses <code>.moments(:)</code> to compute the mean and variance within <code>LayerNorm</code> and <code>BatchNorm</code> <code>Layer</code>s. As well, adds tests for both of them.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/381">PR-381</a>: Uses <code>LazyTensor</code> explicitly to extract traces.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/377">PR-377</a>: Introduces experimental support for installation of Tensorflow into a Swift toolchain.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/380">PR-380</a>: Adds tests for <code>Dense</code> Layer.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/181">PR-181</a>: Adds a non-convolutional GAN example on MNIST.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/179">PR-179</a>: Replaces Autoencoder's activation function with <code>sigmoid</code>. Resolves <a href="https://github.com/tensorflow/swift-models/issues/179">#179</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/178">PR-178</a>: Makes usage of Swift (instead of Python) for downloading and parsing of CIFAR10 dataset.</p>
+</li>
+</ul>
+<h4>Swift for Tensorflow Docs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift/commit/fe3dfd72">fe3dfd72</a>: Updates notebook <code>install_latest_swift.ipynb</code> so that artifacts are fetched from <code>https://storage.googleapis.com/swift-tensorflow-artifacts/nightlies/latest/...</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift/pull/217">PR-217</a>: Updates instructions to use Swift for Tensorflow toolchain within Xcode.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
