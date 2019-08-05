@@ -1,0 +1,123 @@
+<h1>S4TF News - Issue 21, August 4th 2019</h1>
+<p>Welcome to the Issue #21 of <em>Swift for Tensorflow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for Tensorflow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>On Friday 2nd of August, the 5th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li><a href="https://twitter.com/dancherp">Dan Zheng</a> presented the internals of how the Automatic Differentiation is implemented in the Swift Compiler. If you missed <a href="https://docs.google.com/presentation/d/1w2nyZmMWRtZeRuCp8H2se7kSWUyDOOu0Ua9koWNjK-E/edit?usp=sharing">this presentation</a> I encourage you to have a read at the <a href="https://docs.google.com/document/d/1_BirmTqdotglwNTOcYAW-ib6mx_jl-gH9Dbg4WmHZh0/edit#">Implementation Overview</a> document that Dan has put together.</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://github.com/cgarciae">Cristian Garcia</a> shared on the mailing list <a href="https://github.com/cgarciae/NDArray">NDArray</a>, influenced by TensorFlow's <code>Tensor</code> API and numpy documentation. One of the key goals of the library is to make <code>NDArray</code> and its operations usable within Swift for Tensorflow. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/32MQAW39nnM/y_tlpGbMBwAJ">original message</a>).</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26426">PR-26426</a>: Fixes compiler crash when differentiating generic functions with non-<code>Differentiable</code> parameters. Resolves <a href="https://bugs.swift.org/projects/TF/issues/TF-691">TF-691</a> and <a href="https://bugs.swift.org/projects/TF/issues/TF-697">TF-697</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26407">PR-26407</a>: Checks and procudes diagnose for usage of non-differentiable original function in arguments/results. Resolves <a href="https://bugs.swift.org/browse/TF-687">TF-687</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26404">PR-26404</a>: Fixes compiler crash during generic curry thunk cloning. Resolves <a href="https://bugs.swift.org/browse/TF-688">TF-688</a>.</p>
+</li>
+<li>
+<p><a href="">PR-26405</a>: Fix compiler crash during <code>@differentiable</code> attribute's type checking. Resolves <a href="https://bugs.swift.org/browse/TF-521">TF-521</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26402">PR-26402</a>: Improves diagnostics for <code>@differentiable</code>'s attributes requirements that are not met.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26380">PR-26380</a>: Makes sure to always thunk JVPs/VJPs during SIL generation. Resolves: <a href="https://bugs.swift.org/projects/TF/issues/TF-546">TF-546</a>, <a href="https://bugs.swift.org/projects/TF/issues/TF-667">TF-667</a>, <a href="https://bugs.swift.org/projects/TF/issues/TF-682">TF-682</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26389">PR-26389</a>: Makes use of <code>ASTMangler</code> to mangle generated AD functions: JVPs, VJPs, diffentials and pullbacks.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26384">PR-26384</a>: Fixes memory leak produced during emission of subset parameters thunks.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/129">PR-129</a>: Introduces an experimental implementation of Complex Numbers based on <a href="https://github.com/xwu/NumericAnnex">Xiaodi Wu's NumericAnnex</a> implementation.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/409">PR-409</a>: Cleans up old tracing implementation.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/406">PR-406</a>: Materializes inputs simultaneously when executing 0-output <code>LazyTensorOperation</code>. Resolves <a href="https://bugs.swift.org/browse/TF-604">TF-604</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/405">PR-405</a>: Exposes <code>LazyTensorOperation</code> of a <code>LazyTensorHandle</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/401">PR-401</a>: Moves computation of <code>rank</code> and <code>shape</code> properties to <code>TFETensorHandle</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/398">PR-398</a>: Makes publicly readable the list of available devices on the host.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/385">PR-385</a>: Refactors tracing utilities in terms of <code>LazyTensor</code>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/185">PR-185</a>: Extracts common CIFAR-10 and ResNet code.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/182">PR-182</a>: Extracts common MNIST dataset code and introduces an example that uses classic LeNet-5 model.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
