@@ -48,3 +48,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Parker Schuh](https://github.com/pschuh)
 * [Julien Chaumond](https://twitter.com/julien_c)
 * [Lysandre](https://twitter.com/LysandreJik)
+* [Daniel Situnayake](https://twitter.com/dansitu)
