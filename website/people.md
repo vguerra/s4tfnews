@@ -49,3 +49,6 @@ This is the list of people I have mentioned in the newsletter:
 * [Julien Chaumond](https://twitter.com/julien_c)
 * [Lysandre](https://twitter.com/LysandreJik)
 * [Daniel Situnayake](https://twitter.com/dansitu)
+* [Choong Ng](https://twitter.com/choongng)
+* [Rick Wierenga](https://twitter.com/rickwierenga)
+* [Karthik Ramesh Iyer](https://twitter.com/karthik_r_iyer)
