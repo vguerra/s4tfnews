@@ -1,0 +1,129 @@
+<h1>S4TF News - Issue 24, August 25th 2019</h1>
+<p>Welcome to the Issue #24 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>On Friday 23rd of August, the 8th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li>
+<p><a href="https://twitter.com/jeremyphoward">Jeremy Howard</a> gave an introduction and overview of <a href="https://github.com/fastai/swiftai"><code>SwiftAI</code></a>, formerly known as <code>Harebrain</code>. , which is a library modeled after <a href="https://github.com/fastai/fastai">fastai</a> that aims to provide high-level APIs for Swift for Tensorflow.</p>
+</li>
+<li>
+<p>The meeting recording is already available <a href="https://drive.google.com/file/d/1QVJejwLGJ6Yc_H_k3SZmgmH77Y3CFSuD/view?usp=sharing">here</a>, as well a the recordings for the <a href="https://drive.google.com/file/d/12HZsH58EtOT9EiYODeXf0mc874AhzRKC/view?usp=sharing">7th</a> and <a href="https://drive.google.com/file/d/1WbcXuY4tMZVxne6Vwgl9erWlN1gZJMjy/view?usp=sharing">6th</a> meetings.</p>
+</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+<li>
+<p>The SwiftAI Contributors Group held the 1st meeting this past Monday 19th of August. The purpose of the groups is to serve as support for it's participants in contributions to the SwiftAI library. They will be meeting every Monday from now on from 6pm - 7pm (PST).</p>
+<p>You can find the meeting notes in this <a href="https://docs.google.com/document/d/1Ss-n-OdLfuij04iPu6B4TSmE4DtNoN5bVHLrGmIHBWk/edit">google doc</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://github.com/cgarciae">Cristian Garcia</a> has proprosed in the mailing list improvements to the Subscript API. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/FEJ4FzZXT78/zq679G0DAgAJ">original message</a>).</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26801">PR-26801</a>: Speeds up building S4TF toolchains by using <code>sccache</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26762">PR-26762</a>: Refactors implementations of <code>shouldBeDifferentiated</code> that existed in <code>LinearMapInfo</code>, <code>JVPEmitter</code> and <code>VJPEmitter</code>, fixing logic in conditions to be checked and consolidating logic into consice APIs in <code>LinearMapInfo</code>.  Resolves <a href="https://bugs.swift.org/browse/TF-653">TF-653</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26057">PR-26057</a>: Introduces initial support for Forward Mode Automatic Differentiation, to activate it use <code>-Xllvm -run-jvp-generation</code> when running your Swift code.</p>
+</li>
+<li>
+<p><a href="http://github.com/apple/swift/pull/26737">PR-26737</a>: Fixes the following bugs on <code>Array</code> litereal differentiation:</p>
+<ul>
+<li>Memmory leak.</li>
+<li>Production of zero derivatives for values of non-trivial loadable types in OSSA.</li>
+</ul>
+<p>Resolves <a href="https://bugs.swift.org/browse/TF-706">TF-706</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/451">PR-477</a>: Removes <code>Tensor</code>'s conformance to <code>Comparable</code>. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/451">Issue-451</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/461">PR-461</a>: Makes sure materialization is not triggered during shape inference.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/464">PR-464</a>: Refactors common setup and tear down logic in <code>LazyTensor</code> test.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/458">PR-458</a>: Introduces <code>SeparableConv1D</code> Layer.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/462">PR-462</a>: Adding tests for shape-related errors in <code>BatchNorm</code> and <code>LayerNorm</code>.</p>
+</li>
+<li>
+<p>Adding derivate tests for following layers:</p>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/481">PR-481</a>: <code>Reshape</code> and <code>Flatten</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/478">PR-478</a>: <code>UpSampling1D</code>, <code>UpSampling2D</code> and <code>UpSampling3D</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/470">PR-470</a>: <code>GlobalMaxPool</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/469">PR-469</a>: <code>GlobalAvgPool</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/443">PR-443</a>: <code>Conv2D</code>.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/444">PR-444</a>: <code>MaxPool</code>.</li>
+</ul>
+<p>Partially solving <a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-models/pull/188">PR-188</a>: Introduces loading and saving of <code>JPEG</code>s via Raw TensorFslow operations. As a result, <code>Matplotlib</code> dependency has been dropped from some examples.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
