@@ -43,7 +43,7 @@ This is the list of people I have mentioned in the newsletter:
 * [Masaki Kozuki](https://twitter.com/crcrpar)
 * [Eugene Burmako](https://twitter.com/eugene_burmako)
 * [omochimetaru](https://twitter.com/omochimetaru)
-* [Cristian Garcia](https://github.com/cgarciae)
+* [Cristian Garcia](https://twitter.com/cgarciae88)
 * [Slawek Smyl](https://twitter.com/slaweksmyl)
 * [Parker Schuh](https://github.com/pschuh)
 * [Julien Chaumond](https://twitter.com/julien_c)
@@ -52,3 +52,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Choong Ng](https://twitter.com/choongng)
 * [Rick Wierenga](https://twitter.com/rickwierenga)
 * [Karthik Ramesh Iyer](https://twitter.com/karthik_r_iyer)
+* [Marc Lanctot](https://twitter.com/sharky6000)

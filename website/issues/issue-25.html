@@ -1,0 +1,153 @@
+<h1>S4TF News - Issue 25, September 1st 2019</h1>
+<p>Welcome to the Issue #25 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>A new Xcode 11 (Beta) development snapshot of the Swift for Tensorflow toolchain is now available for download. Get a <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#development-snapshots">copy</a> 🛠.</p>
+</li>
+<li>
+<p><a href="https://deepmind.com">DeepMind</a> announced OpenSpiel: a framework for Reinforcement Learning in games and part of the library has been <a href="https://github.com/deepmind/open_spiel/tree/master/swift">ported to Swift for Tensorflow</a>. Find the announcement's blog post <a href="https://deepmind.com/research/open-source/openspiel">here</a> and the paper <a href="https://arxiv.org/pdf/1908.09453.pdf">here</a> 🎮.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/numathic">Numathic</a> released <a href="https://apps.apple.com/ca/app/ai-editor/id1469478081">AI Editor</a> which is an editor that uses ML algorithms to assist your writting. It's built using Visual Studio Code, OpenAI's GPT-2 and Swift for Tensorflow. Give the editor a try. Check out the announcement on <a href="https://twitter.com/numathic/status/1166881024195928064">twitter</a> 📝.</p>
+</li>
+<li>
+<p>On Friday 30th of August, the 9th SIG Swift Design meeting took place. This time, it was all about Reinforcement Learning. Here you have the highlights:</p>
+<ul>
+<li>
+<p><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> presented the RL projects he has been working on: <a href="https://github.com/eaplatanios/swift-rl">swift-rl</a>, <a href="https://github.com/eaplatanios/swift-ale">swift-ale</a> and <a href="https://github.com/eaplatanios/swift-retro">swift-retro</a>. Find the slides of the presentation <a href="https://drive.google.com/file/d/1MvElxjvyd7VoFdGoGt5KYjUnRsLS89lL/view?usp=sharing">here</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/bsaeta">Brennan Saeta</a> and <a href="https://twitter.com/sharky6000">Marc Lanctot</a> talked about <a href="https://github.com/deepmind/open_spiel">OpenSpiel</a> and the <a href="https://github.com/deepmind/open_spiel/tree/master/swift">Swift for Tensorflow port of it</a>. Find the slides of the presentation <a href="https://drive.google.com/file/d/1f-YKrqIR6iO3He0DmmUEwl406m6CkfZ7/view">here</a>.</p>
+</li>
+</ul>
+<p>If you were not able to attend this SIG meeting,the <a href="https://drive.google.com/file/d/1dRNcfwPVOG4oy50nI2dWSP1IIDbhVBen/view?usp=sharing">recording</a> is already available for you to catch up.</p>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26848">PR-26848</a>: Introduces <code>InMemoryFrontend</code> lib, which runs compilation and emits resulting module to a memory buffer, w/out writting to the file system.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26827">PR-26827</a>: Adds <code>zeroTangentVector</code> to <code>Differentiable</code> protocol. <strong>Note</strong>: Derivation for this property is not yet implemented.  Resolving partially Partially resolves <a href="https://bugs.swift.org/browse/TF-708">TF-708</a>.</p>
+</li>
+<li>
+<p>Work on new protocol <code>EuclideanDifferentiable</code> protocol, which you can use for representing common differentiable data structures that contain both differentiable vector properties and other
+stored properties that do not have a derivative:</p>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/26900">PR-26900</a>: Fixes crash on derived conformances. Resolves <a href="https://bugs.swift.org/browse/TF-783">TF-783</a>.</li>
+<li><a href="https://github.com/apple/swift/pull/26890">PR-26890</a>: Derives <code>differentiableVectorView</code> property from member's vector views. Resolves <a href="https://bugs.swift.org/browse/TF-785">TF-785</a>.</li>
+<li><a href="https://github.com/apple/swift/pull/26867">PR-26867</a>: Derives conformances to the protocol. Resolves <a href="https://bugs.swift.org/browse/TF-777">TF-777</a>.</li>
+<li><a href="https://github.com/apple/swift/pull/26827">PR-26827</a>: Introduces <code>EuclideanDifferentiable</code> protocol.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/26826">PR-26826</a>: Makes force-unwrapping differentiable. Resolves <a href="https://bugs.swift.org/browse/TF-455">TF-455</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/397">PR-397</a>: Fixes order of elements in returned tuple in VJP of <code>conv2DBackpropFilter</code> (<code>_vjpConv2DBackpropFilter</code>) as differentiation is w.r.t. <code>(x, input)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/476">PR-476</a>: Allows to automatically promote constants to inputs based on history in <code>LazyTensor</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/473">PR-473</a>: Adds <code>Tensor.init (linearSpaceFrom:to:count:)</code> initializer with <code>Scalar</code> and <code>Tensor</code> parameter variants.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/497">PR-497</a>: Removes backwards compatible APIs needed for 0.4.0 release. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/495">Issue-495</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/498">PR-498</a>: Fixes Inputs for Layers  <code>ZeroPadding1D</code>, <code>ZeroPadding2D</code> and <code>ZeroPadding3D</code> as they should have batch and feature dimensions. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/494">Issue-494</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/491">PR-491</a>: Makes <code>Module</code> conform <code>EuclideanDifferentiable</code> as well as all <code>Layer</code> combinators. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/456">Issue-456</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/480">PR-480</a>: Matches gradient computation for <code>min(_:_:)</code> and <code>max(_:_:)</code> to their Python's Tensorflow counterparts.</p>
+</li>
+<li>
+<p>Adding derivate tests for following layers:</p>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/493">PR-493</a>: <code>ZeroPadding1D</code>, <code>ZeroPadding2D</code> and <code>ZeroPadding3D</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/493">PR-493</a>: <code>Embedding</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/472">PR-472</a>: <code>AvgPool</code>.</p>
+</li>
+</ul>
+<p>Partially solving <a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/204">PR-204</a>: Adds <code>SqueezeNet</code> version 1.1 (<code>SqueezeNetV1_1</code>) and renames prev. implementation to <code>SqueezeNetV1_0</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/198">PR-198</a>: Adds shape-based inference tests for all image classification models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/203">PR-203</a>: Converts <code>Autoencoder</code> and <code>Catch</code> to use <code>Sequential</code>. Partially solving [Issue-202]((https://github.com/tensorflow/swift-models/issues/202).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/200">PR-200</a>: Converts MNIST classifier (LeNet-5) to use <code>Sequential</code>.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
