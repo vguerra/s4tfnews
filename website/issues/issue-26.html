@@ -1,0 +1,95 @@
+<h1>S4TF News - Issue 26, September 8th 2019</h1>
+<p>Welcome to the Issue #26 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>The 1st release candidate for Swift for TensorFlow 0.5.0 is now available (Ubuntu and Colab only, macOS package is coming soon!). Grab a copy from the <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#release-candidates">Release Candidate</a>'s section from the <a href="https://github.com/tensorflow/swift/blob/master/Installation.md">installation instructions</a>. The <a href="https://docs.google.com/document/d/1p8daaIFswkOwbhmdwLJ7NRWzX0uY9jMZYRfRH0EymV8/edit">S4TF v0.5 Migration Guide</a> document guides you through all changes since v0.4. Please give this release a try and report any issues on <a href="https://bugs.swift.org/browse/TF">JIRA</a> you find.</p>
+</li>
+<li>
+<p>On Monday 9th of September at 6 PM (Pacific Time), the <a href="https://www.meetup.com/Swift-for-TensorFlow">Swift for TensorFlow</a> meetup will host an event. The topic for this edition is <a href="https://www.meetup.com/Swift-for-TensorFlow/events/262262835/">Swift as syntactic sugar for MLIR</a>. The event is taking place at Google Developers Launchpad Space in San Francisco, CA. If you plan to attend, make sure you <a href="https://www.meetup.com/Swift-for-TensorFlow/events/262262835/">reserve your place</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/rxwei">Richard Wei</a> has posted in the Swift Evolution forums the proposal for <a href="https://forums.swift.org/t/differentiable-programming-mega-proposal/28547">Differentiable Programming in Swift</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/jamrdell">James Dellinger</a> has written an excellent guide on <a href="https://nbviewer.jupyter.org/github/jamesdellinger/fastai_deep_learning_course_part2_v3/blob/master/13_swift_resnet_pipeline_s4tf_v04_my_reimplementation.ipynb?flush_cache=true">Building and Training an XResNet from Scratch</a>.</p>
+</li>
+<li>
+<p>The 2019 edition of <a href="https://summerofcode.withgoogle.com/">GSoC</a> has endeed and results have been announced this last 3rd September. Go to the <a href="https://summerofcode.withgoogle.com/organizations/6137730124218368/?sp-page=2#4520326505955328">TensorFlow organization</a> page to access the final submitions the students worked on.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p>Improvements done to building of Swift for Tensorflow toolchain:</p>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27032">PR-27032</a>: Makes sure that TensorFlow library symlinks are preserved.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27029">PR-27029</a>: Removes dependency on <code>libtensorflow_framework.so</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27025">PR-27025</a>: Makes usage of python 3 to launch lldb tests.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/504">PR-504</a>: Includes OpenSpiel in the <code>swift-apis</code> tests.</li>
+</ul>
+<h3>Swift LLDB</h3>
+<ul>
+<li><a href="https://github.com/apple/swift-lldb/pull/1961">PR-1961</a>: Fixes code auto-completions for Swift in Jupyter.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
