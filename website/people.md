@@ -54,3 +54,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Karthik Ramesh Iyer](https://twitter.com/karthik_r_iyer)
 * [Marc Lanctot](https://twitter.com/sharky6000)
 * [James Dellinger](https://twitter.com/jamrdell)
+* [Vova Manannikov](https://github.com/vvmnnnkv)
