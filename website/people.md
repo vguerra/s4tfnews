@@ -55,3 +55,5 @@ This is the list of people I have mentioned in the newsletter:
 * [Marc Lanctot](https://twitter.com/sharky6000)
 * [James Dellinger](https://twitter.com/jamrdell)
 * [Vova Manannikov](https://github.com/vvmnnnkv)
+* [Paul Krill](https://twitter.com/pjkrill)
+* [Alex Suhan](https://github.com/asuhan)
