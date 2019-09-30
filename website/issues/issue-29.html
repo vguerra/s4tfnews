@@ -1,0 +1,104 @@
+<h1>S4TF News - Issue 29, September 29th 2019</h1>
+<p>Welcome to the Issue #29 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>The final release of Swift for Tensorflow v0.5 is now available. Feel free to try it out in Colab or download a pre-built pacakge from <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#releases">Releases</a> download area.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/biocodes">Siamak Ashrafi</a> gave a talk at <a href="https://twitter.com/360iDev">360iDev</a> conference this past August 2019. The title of his talk was <em>Why Swift for TensorFlow</em>, giving an overview of Machine Learning, as well as TensorFlow and why you should be using Swift for TensorFlow to train your models. You can finde the recording of his talk on <a href="https://www.youtube.com/watch?v=Lovc4ZyWWn0">YouTube</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/swiftbysundell">Swift by Sundell</a> podcast, hosted by <a href="https://twitter.com/johnsundell">John Sundell</a>, will be receiving as guests <a href="https://twitter.com/dynamicwebpaige">Paige Bailey</a> and <a href="https://twitter.com/bsaeta">Brennan Saeta</a> to talk about Machine Learning and Swift for Tensorflow. If you have a questions for them, be sure you reply to this <a href="https://twitter.com/johnsundell/status/1178683513337499649?s=20">tweet</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27420">PR-27420</a>: Makes <code>(SIL)DifferentiableAttr</code> store directly derivative generic signature.</p>
+</li>
+<li>
+<p><a href="">PR-27421</a>: Makes sure that JVP and VJP use same differentiation conditions. Resolves <a href="https://bugs.swift.org/browse/TF-800">TF-800</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27393">PR-27393</a>: Enables ownership for JVP/VJP SILGen thunks. Resolves <a href="https://bugs.swift.org/browse/TF-703">TF-703</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27358">PR-27358</a>: Unifies forward and reverse mode AD activity analysis. Resolves <a href="https://bugs.swift.org/browse/TF-813">TF-813</a> and <a href="https://bugs.swift.org/browse/TF-800">TF-800</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27370">PR-27370</a>: Cherry-picks <a href="https://github.com/apple/swift/commit/fe02d508d0292e914a67af461f88f1bab66d0b04">fe02d50</a> to fix stdlib parsing error in Debug builds. Details in <a href="https://github.com/apple/swift/pull/27203">PR-27203</a>. Resolves <a href="https://bugs.swift.org/browse/TF-814">TF-814</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27354">PR-27354</a>: Adds forward mode AD support for <code>unconditional_checked_cast_addr</code> operation.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/516">PR-516</a>: Removes all APIs marked for removal after Swift for TensorFlow 0.5 release.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/460">PR-460</a>: Fixes VJP of <code>Conv3D</code> and adds respective derivative tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/513">PR-513</a>: Adds derivative tests for <code>SeparableConv2D</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/441">PR-441</a>: Fixes <code>bias</code> vector initialization within <code>DepthwiseConv2D.init(filterShape:strides:padding:activation:filterInitializer:...)</code>.</p>
+</li>
+</ul>
+<h4>Swift for Tensorflow Docs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift/pull/270">PR-270</a>: Updates custom differentiation tutorial for Swift for TensorFlow v0.5.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
