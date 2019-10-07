@@ -1,0 +1,106 @@
+<h1>S4TF News - Issue 30, October 6th 2019</h1>
+<p>Welcome to the Issue #30 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>On Friday 4th of October, the 11th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li><a href="https://twitter.com/apaszke">Adam Paszke</a> presented the tool he's been working on for static analysis of Tensor shapes. The tool will be published very soon so stay tunned. In the meantime check out the demo he did during the SIG meeting.</li>
+</ul>
+<p>You can find the meeting <a href="https://drive.google.com/file/d/1_AnKkTJwcbz6g_hBqY0b0NqgrKxPhclI/view">recording</a> notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27556">PR-27556</a>: Adds tests for <code>AutoDiffIndexSubset</code> initializers.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27514">PR-27514</a>: Replaces <code>AutoDiffParameterIndices</code> with <code>AutoDiffIndexSubset</code> and deletes <code>AutoDiffParameterIndices</code>. Resolves <a href="https://bugs.swift.org/projects/TF/issues/TF-538">TF-538</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27505">PR-27505</a>: Removes <code>Differentiable</code> APIs deprecated in release of v0.5.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27472">PR-27472</a>: Makes sure that activity analysis does not propagate activity through <code>@noDerivative</code> field projections from a struct. Resolves <a href="https://bugs.swift.org/browse/TF-865">TF-865</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27471">PR-27471</a>: Renames <code>AutoDiffFunction</code> to <code>DifferentiableFunction</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27428">PR-27428</a>: Optimizes computation of derivative generic signatures.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27445">PR-27445</a>: Adds <code>-enable-experimental-differentiable-programming</code> frontend flag to enable all differentiable programming features in the compiler.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/520">PR-520</a>: Deprecates <code>Tensor.droppingOut</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/514">PR-514</a>: Introduces <code>Tensor</code> padding modes.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-models/pull/213">PR-213</a>: Introduces DenseNet(<code>DenseNet121</code>) implementation.</li>
+</ul>
+<h4>Swift for Tensorflow Docs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift/pull/233">PR-233</a>: Adds script that install a Swift for TensorFlow toolchain on Ubuntu 18.04.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/524">Issue-524</a>: Rename <code>transposed(withPermutations:)</code> to <code>transposed(permutation:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

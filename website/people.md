@@ -58,3 +58,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Paul Krill](https://twitter.com/pjkrill)
 * [Alex Suhan](https://github.com/asuhan)
 * [Siamak Ashrafi](https://twitter.com/biocodes)
+* [Adam Paszke](https://twitter.com/apaszke)
