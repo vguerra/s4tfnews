@@ -59,3 +59,6 @@ This is the list of people I have mentioned in the newsletter:
 * [Alex Suhan](https://github.com/asuhan)
 * [Siamak Ashrafi](https://twitter.com/biocodes)
 * [Adam Paszke](https://twitter.com/apaszke)
+* [Ted Kremenek](https://twitter.com/tkremenek)
+* [Mohd Sanad Zaki Rizvi](https://twitter.com/sanad_maker)
+* 
