@@ -1,0 +1,110 @@
+<h1>S4TF News - Issue 33, October 27th 2019</h1>
+<p>Welcome to the Issue #33 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/bhutanisanyam1">Sanyam Bhutani</a> has released, this last weekend, two interviews on his <a href="https://chaitimedatascience.com/">Chai Time Data Science</a> podcast that you should listen to:</p>
+<ul>
+<li>
+<p>An interview with <a href="https://twitter.com/sharky6000">Dr. Marc Lanctot</a> where they talk all about Research at DeepMind, Deep Learning Research, AlphaGo, Swift For TensorFlow and OpenSpiel. Check out the video on <a href="https://youtu.be/-uUHR5VALB0">Youtube</a>.</p>
+</li>
+<li>
+<p>An interview with <a href="https://twitter.com/bart_chr">Bart Chrzaszcz</a> where they talk about his Google Software Engineering Internship, his contributions to Swift For TensorFlow and OpenSpiel. Check out the video on <a href="https://youtu.be/OTXKRPGhQu8">Youtube</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The <a href="https://twitter.com/rxwei/status/1187923715436138496">upstreaming effort</a> to bring differentiable programming to the master branch of swift repository has started. All PRs related are prefixed with <strong>[AutoDiff upstream]</strong>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/dynamicwebpaige">Paige Bailey</a> was at <a href="https://twitter.com/tryswiftnyc">try! Swift NYC</a> presenting Swift for TensorFlow. You can find the recording of her talk, Swift for TensorFlow - Machine Learning with no Boundaries, in <a href="https://youtu.be/xnwgifICYYA">Youtube</a>.</p>
+</li>
+<li>
+<p>On Friday 25th of October, the 14th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li>
+<p><a href="https://github.com/ewconnell">Edward Connell</a> presented <a href="https://github.com/ewconnell/swiftrt">SwiftRT</a>: A Tensor runtime layer to meet the high performance requirements of Swift for TensorFlow. On this 1st part of the presentation Edward went into the internals of the library. Stay tunned for the 2nd part.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/dancherp">Dan Zheng</a> has prorposed that all additions or changes to the API should be discussed before merging into the <a href="https://github.com/tensorflow/swift-apis">swift-apis</a> repo. Among the recent changes we have:</p>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/529">PR-529</a>: TensorFlow checkpoint reader.</li>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/319">PR-319</a>: Layer parameter initializers.</li>
+</ul>
+</li>
+<li>
+<p>Last but not least, <a href="https://twitter.com/dancherp">Dan Zheng</a> presented the upcoming <a href="https://gist.github.com/dan-zheng/0e28c41dd0734fa6d3644e6ed0a9c16f">retroactive derivative registration</a>, which will allow for definition of derivatives in different modules.</p>
+</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27861">PR-27861</a>: Replaces <code>-Xllvm -run-jvp-generation</code> by <code>-enable-experimental-forward-mode-differentiation</code> to enable forward-mode differentiation. Resolves <a href="https://bugs.swift.org/browse/TF-935">TF-935</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27854">PR-27854</a>: Adds support for declaration-only <code>SILDifferentiabilityWitness</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27850">PR-27850</a>: Fixes memory bug in <code>IndexSubset</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27726">PR-27726</a>: Fixes a bug on <code>IRGen</code> for invalid IR emited for some <code>partial_apply</code> instructions. Resolves <a href="https://bugs.swift.org/browse/TF-917">TF-917</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/536">PR-536</a>: Makes empty tangent vector initializer public.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

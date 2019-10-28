@@ -61,4 +61,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Adam Paszke](https://twitter.com/apaszke)
 * [Ted Kremenek](https://twitter.com/tkremenek)
 * [Mohd Sanad Zaki Rizvi](https://twitter.com/sanad_maker)
-* 
+* [Edward Connell](https://github.com/ewconnell)
