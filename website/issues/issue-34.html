@@ -1,0 +1,100 @@
+<h1>S4TF News - Issue 34, November 3rd 2019</h1>
+<p>Welcome to the Issue #34 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/jacopomangia">Jacopo Mangiavacchi</a> has <a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/I2_Z7F6MseA/hTFttLa0EwAJ">shared</a> his <a href="https://github.com/JacopoMangiavacchi/SwiftTFRecords">SwiftTFRecords</a> library, which facilitates producing and importing data in the TFRecords format directly in Swift.</p>
+</li>
+<li>
+<p>The design document for <a href="https://github.com/ewconnell/swiftrt">SwiftRT</a>, a high-peformance Tensor runtime layer presented by <a href="https://github.com/ewconnell">Edward Connell</a> during last SIG Swift Design meeting, is now available <a href="https://docs.google.com/document/d/1IasqA1EPrl3XB1QwNdwtVSe7RfZYnIHFUtyCtWlMDx0/edit?usp=sharing"></a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/dynamicwebpaige">Paige Bailey</a> and <a href="https://twitter.com/bsaeta">Brennan Saeta</a> were present at <a href="https://conferences.oreilly.com/tensorflow/tf-ca">TensorFlow World 2019</a> the past week to talk about <a href="https://conferences.oreilly.com/tensorflow/tf-ca/public/schedule/detail/79323">Swift for TensorFlow - From the Foundations</a>. Check out the recording, which is available on <a href="https://www.youtube.com/watch?v=9FWsSGD6V8Q">YouTube</a>.</p>
+</li>
+<li>
+<p>As well, during <a href="https://conferences.oreilly.com/tensorflow/tf-ca">TensorFlow World 2019</a>, <a href="https://twitter.com/themartianlife">Mars Geldard</a>, <a href="https://twitter.com/The_McJones">Tim Nugent</a>, and <a href="https://twitter.com/parisba">Paris Buttfield-Addison</a> ran a tutorial titled <a href="https://conferences.oreilly.com/tensorflow/tf-ca/public/schedule/detail/78523">Swift for TensorFlow in 3 hours
+</a>. You can find the material used for this tutorial on <a href="https://github.com/AIwithSwift/TFWorld2019-SwiftIn3Hours">GitHub</a>.</p>
+</li>
+<li>
+<p>Nightly development snapshopts of Swift for TensorFlow are now available for Ubuntu 18.04 (CUDA 10.1). You can find then in the <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#development-snapshots">Development Snapshots</a> section of the install instructions.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27971">PR-27971</a>: Makes <code>Array.DifferentiableView</code> unconstrained which allows to re-enable <code>ParseableInterface</code> tests. Resolves <a href="https://bugs.swift.org/browse/TF-489">TF-489</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27985">PR-27985</a>: Makes sure to store original declaration in <code>DifferentiableAttr</code> to ease resolution of parameter indices.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27988">PR-27988</a>: Cleans up the type-checking for <code>@transposing</code> attribute.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27923">PR-27923</a>: Enables <code>LoadableByAddress</code> IRGen transformation.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27919">PR-27919</a>: Makes sure that <code>DifferentiabilityWitnessFunctionInst</code> stores a pointer to the witness.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/27918">PR-27918</a>: Renames <code>TransposingAttr::getParameterIndexSubset</code> to <code>TransposingAttr::getParameterIndices</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/538">PR-538</a>: Adds constraint <code>Element: Differentiable</code> to <code>Array.DifferentiableView</code> exntentions.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

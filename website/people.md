@@ -62,3 +62,7 @@ This is the list of people I have mentioned in the newsletter:
 * [Ted Kremenek](https://twitter.com/tkremenek)
 * [Mohd Sanad Zaki Rizvi](https://twitter.com/sanad_maker)
 * [Edward Connell](https://github.com/ewconnell)
+* [Jacopo Mangiavacchi](https://twitter.com/jacopomangia)
+* [Mars Geldard](https://twitter.com/themartianlife)
+* [Tim Nugent](https://twitter.com/The_McJones)
+* [Paris Buttfield-Addison](https://twitter.com/parisba)
