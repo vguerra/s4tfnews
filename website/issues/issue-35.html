@@ -1,0 +1,118 @@
+<h1>S4TF News - Issue 35, November 10th 2019</h1>
+<p>Welcome to the Issue #35 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>A new Xcode 11 development snapshot of the Swift for Tensorflow toolchain is now available for download. Get a <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#development-snapshots">copy</a> 🛠.</p>
+</li>
+<li>
+<p>On Friday 8th of November, the 15th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li><a href="https://twitter.com/jeremyphoward">Jeremy Howard</a> did a presentation on the course <a href="https://dev.fast.ai/">FastAI v2</a>. The recording will be available soon for you to follow up on the technical discussion and deep-dive.</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28150">PR-28150</a>: Extends test suite to cover <em>Crashers</em>, <em>Activity analysis</em> and <em>Control-Flow differentiation</em>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28067">PR-28067</a>: <code>IRGen</code> differentiability witness tables. Resolves <a href="https://bugs.swift.org/browse/TF-930">TF-930</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28117">PR-28117</a>: Introduces usage of <code>PrettyStackTrace</code> in Differentiation transform.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28089">PR-28089</a>: Moves differentiation sources in stdlib into <code>stdlib/public/core/Differentiation</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28069">PR-28069</a>: Removes explicit flag <code>-enable-large-loadable-types</code> from tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28018">PR-28018</a>: Fixes building the macOS toolchain <code>build-toolchain-tensorflow</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/288">PR-288</a>: Fixes bug in <code>TransposedConv2D</code> and adds respective tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/525">PR-525</a>: Changes type of some properties from <code>Tensor&lt;Scalar&gt;</code> to <code>Scalar</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/541">PR-541</a>: Moves <code>Dense</code> and <code>Dropout</code> Layers into separate files.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/523">PR-523</a>: Adds preconditions for <code>conv2D</code>. Partially resolves <a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/532">PR-532</a>:  Adds support for constant and truncated Normal initializers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/540">PR-540</a>: Introduces the <code>Tensor</code> library.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/547">PR-547</a>, <a href="https://github.com/tensorflow/swift-apis/pull/544">PR-544</a>, <a href="https://github.com/tensorflow/swift-apis/pull/543">PR-543</a>: Renames enum <code>Raw</code> to <code>_Raw</code> to make explicit that it is a <em>unstable / not-guaranteed</em> API.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-models/pull/220">PR-220</a>: Follows up on changes introduced by <a href="https://github.com/tensorflow/swift-apis/pull/525">tensorflow/swift-apis#525</a>.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
