@@ -1,0 +1,158 @@
+<h1>S4TF News - Issue 38, December 1st 2019</h1>
+<p>Welcome to the Issue #38 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>A new Xcode 11 Development snapshot is now available for you to try out Swift for Tensorflow. Get it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2019-11-27-a-osx.pkg">here</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/dancherp">Dan Zheng</a> has published a Wiki Page explaining the <a href="https://github.com/tensorflow/swift-apis/wiki/Tensor-API-guidelines"><code>Tensor</code> API guidelines</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/Rahul_Bhalley">Rahul Bhalley</a> has <a href="https://twitter.com/Rahul_Bhalley/status/1200386656051716096">created a sub-reddit</a> dedicated to Swift for TensorFlow. Join the conversations happening <a href="https://www.reddit.com/r/S4TF/">here</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/johnlinvc">Lin Yu Hsiang</a> gave a talk during <a href="https://iplayground.kktix.cc/events/iplayground2019">iPlayground 2019</a> about Swift for TensorFlow, Deep Learning and Automatic Differentiation in the Swift compiler. The recording of the talk is available on <a href="https://www.youtube.com/watch?v=zynVdjxDjlY">YouTube</a> (Language: Taiwanese).</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://twitter.com/bradlarson">Brad Larson</a> details all different GitHub projects involved in the development of Swift for TensorFlow.
+(<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/95rP1GyN26I/1b0tFQbGAQAJ">original message</a>).</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28505">PR-28505</a>: Adds <code>differentiability_witness_function</code> instruction assertions.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28451">PR-28451</a>: Makes the differentiation pass look up witnesses and make <code>differentiable_witness_function</code> instructions, instead of looking up attributes and making <code>function_refs</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/24068">PR-24068</a>: Makes Dictionary's KeyPathIterable conformance use indices.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28494">PR-28494</a>: Fixes unsilenceable <code>@noDerivative</code> warning. Resolves <a href="https://bugs.swift.org/browse/TF-1018">TF-1018</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28492">PR-28492</a>: Fixes differentiation of tuples with single differentiable element. Resolves <a href="https://bugs.swift.org/browse/TF-964">TF-964</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28490">PR-28490</a>: Fixes compiler crash when doing <code>@differentiable</code> attribute type-checking. Resolves <a href="https://bugs.swift.org/browse/TF-1017">TF-1017</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28488">28488</a>: Renames <code>@transposing</code> to <code>@transpose(of:)</code>. Resolves <a href="https://bugs.swift.org/browse/TF-992">TF-992</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28480">PR-28480</a>: Adds optimization pass that devirtualizes differentiability witnesses. Resolves <a href="https://bugs.swift.org/browse/TF-919">TF-919</a> and <a href="https://bugs.swift.org/browse/TF-994">TF-994</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28483">PR-28483</a>: Bans local-scope derivative registration and adds respective diagnostics. Resolves <a href="https://bugs.swift.org/browse/SR-11849">SR-11849</a> and <a href="https://bugs.swift.org/browse/TF-881">TF-881</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28416">PR-28416</a>: Adds <code>Differentiable.zeroTangentVectorInitializer</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28477">28477</a>: Fixes aggregate adjoint value accumulation bug. Resolves <a href="https://bugs.swift.org/browse/TF-943">TF-943</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28481">PR-28481</a>: Renames <code>@differentiating</code> to <code>@derivative(of:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28468">PR-28468</a>: Extends support of derivative registration for more declaration kinds: computed properties, subscripts, and initializers. Resolves <a href="https://bugs.swift.org/browse/TF-281">TF-281</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28470">PR-28470</a>: Updates <code>differentiableFunction(from:)</code> to use differentiable function constructor builtins. Resolves <a href="https://bugs.swift.org/browse/SR-11847">SR-11847</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28471">PR-28471</a>: Makes <code>transpose(of:)</code> available. Resolves <a href="https://bugs.swift.org/browse/SR-11845">SR-11845</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28472">PR-28472</a>: Implies <code>AdditiveArithmetic</code> generic constraints from <code>@differentiable(linear)</code> parameters or results.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28469">PR-28469</a>: Adds <code>Builtin.applyTranspose*</code>. Resolves <a href="https://bugs.swift.org/browse/SR-11844">SR-11844</a> and <a href="https://bugs.swift.org/browse/SR-11851">SR-11851</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28466">PR-28466</a>: Cleans up differentiation-related attributes.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28467">PR-28467</a>: Adds builtin <code>differentiable</code>/<code>linear</code> function consturctors. Resolves <a href="https://bugs.swift.org/browse/SR-11846">SR-11846</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28463">PR-28463</a>: Fixes differentiability witness SIL serialization.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift-apis/pull/569">PR-569</a>: Renames <code>@differentiating</code> to <code>@derivative(of:)</code>.</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/230">PR-230</a>: Adds support for machine-readable JSON output.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/228">PR-228</a>: Makes usage of <code>stderr</code> for logging messages.</p>
+</li>
+</ul>
+<h4>Swift Jupyter</h4>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1011">TF-1011</a>: [AD] Forward-mode crash: Assertion failed: (Operand-&gt;getType().is&lt;TupleType&gt;() &amp;&amp; &quot;Expected a tuple typed operand?!&quot;).</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

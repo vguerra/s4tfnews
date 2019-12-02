@@ -1,0 +1,120 @@
+<h1>S4TF News - Issue 37, November 24th 2019</h1>
+<p>Welcome to the Issue #37 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>Last September <a href="https://twitter.com/asparagui">Brett Koonce</a> gave a talk at <a href="https://events.withgoogle.com/ml-summit-19-seattle/agenda/">Kirkland ML Summit 2019</a> titled <em>Convolutional Neural Networks with Swift</em>. The recording of the talk is available on <a href="https://www.youtube.com/watch?v=d6jZUYjHaWI">YouTube</a>. Among the examples he shows on this talk, you can find <a href="https://github.com/huan/swift-MNIST">swift MNIST</a>, which is a Swift Package for the <a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST Dataset</a>.</p>
+</li>
+<li>
+<p>The 1st Release Candidate for Swift for TensorFlow toolchain is available for download. Grab your copy from the <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#releases">Releases</a> section from the Install instructions. The release notes are available in this <a href="https://docs.google.com/document/d/1LihPvZRzbncMZtXnhhWzUNWzI_FOFee_RgcyjLjh6Cs/edit">document</a>. Feel free to report any issues on the <a href="https://groups.google.com/a/tensorflow.org/forum/#!forum/swift">mailing list</a> or create tickets on the respective tracking systems: <a href="https://bugs.swift.org/browse/TF">Swift Compiler</a>, <a href="https://github.com/tensorflow/swift-apis/issues">DeepLearning Library</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28429">PR-28429</a>: Improves diagnostic for multiple active results.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28402">PR-28402</a>: Populates differentiability witnesses during the differentiation pass.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28389">PR-28389</a>: Introduces tests for differentiability witness wrt params.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28108">PR-28108</a>: Introduces derivatives for more tgmath functions. Resolves <a href="https://bugs.swift.org/browse/TF-812">TF-812</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28352">PR-28352</a>: Fixes variedness propagation for <code>apply</code> <code>inout</code> arguments. Resolves <a href="https://bugs.swift.org/browse/TF-974">TF-974</a>.</p>
+</li>
+<li>
+<p><a href="">PR-28320</a>: Revamps <code>Array</code> literal initialization differentiation. Resolves <a href="https://bugs.swift.org/browse/TF-952">TF-952</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28331">PR-28331</a>: Implements IRGen for <code>differentiability_witness_function</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/563">PR-563</a>: Introduces support for <code>cholesky</code> decomposition, including it's derivative.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/250">PR-250</a>: Adds <code>@_Freezable</code> property wrapper.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/174">PR-174</a>: Introduces layers <code>TransposedConv1D</code> and <code>TransposedConv3D</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/335">PR-335</a>: Refactors random and variance-scaling initializers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/558">PR-558</a>: Moves <code>TensorHandle</code> related code from <code>ShapedArray.swift</code> to <code>TensorHandle.swift</code>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/226">PR-226</a>: Add support for CL arguemnt parsing on <code>Benchmarks</code> target.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/224">PR-224</a>: Introduces <code>ImageClassificationDataset</code> protocol and makes <code>MNIST</code> and <code>CIFAR10</code> Datasets conform to it. Resolves <a href="https://github.com/tensorflow/swift-models/issues/206">Issue-206</a>.</p>
+</li>
+</ul>
+<h4>Swift Jupyter</h4>
+<ul>
+<li><a href="https://github.com/google/swift-jupyter/pull/82">PR-82</a>: Fixes <code>build.db</code> lookup.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

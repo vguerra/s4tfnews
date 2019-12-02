@@ -66,3 +66,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Mars Geldard](https://twitter.com/themartianlife)
 * [Tim Nugent](https://twitter.com/The_McJones)
 * [Paris Buttfield-Addison](https://twitter.com/parisba)
+* [Lin Yu Hsiang](https://twitter.com/johnlinvc)

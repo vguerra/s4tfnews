@@ -1,0 +1,154 @@
+<h1>S4TF News - Issue 36, November 17th 2019</h1>
+<p>Welcome to the Issue #36 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>On Friday 15th of November, the 16th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li><a href="http://www.marcrasi.com/">Marc Rasi</a> presented a tool called <em>ADPropertyTests</em> that he authored to
+<a href="https://docs.google.com/document/d/1y6OpLSdeDAqsYiOtYaL5NJli3usV-BBaijhu17lDEX0/edit?usp=sharing">Randomly generate Test cases for Swift Automatic DIfferentiation</a>. The design document for the tool is available <a href="https://docs.google.com/document/d/1y6OpLSdeDAqsYiOtYaL5NJli3usV-BBaijhu17lDEX0/edit#heading=h.pd8i88aydrf4">here</a> and you can as well checkout the tool's source code on <a href="https://github.com/tensorflow/swift/tree/ad-property-testing/ADPropertyTests">GitHub</a>.</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28285">PR-28285</a>: Fixes a user-after-free crash in activity analysis. Resolves <a href="https://bugs.swift.org/browse/TF-945">TF-945</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28281">PR-28281</a>: Fixes <code>destructure_tuple</code> differentiation. Resolves <a href="https://bugs.swift.org/browse/TF-922">TF-922</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28259">PR-28259</a>: Fixes usefulness propagation for <code>Array</code> literal initialization. Partially resolves <a href="https://bugs.swift.org/browse/TF-952">TF-952</a>.</p>
+</li>
+<li>
+<p><a href="">PR-28257</a>: Fixees over-consume of adjoint values when differentiating <code>tuple</code> instruction. Resolves <a href="https://bugs.swift.org/browse/TF-962">TF-962</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28258">PR-28258</a>: Introduces negative tests for <a href="https://bugs.swift.org/browse/TF-952">PR-TF-952</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28253">PR-28253</a>: Fixes adjoint value propagation for basic block arguments. Resolves <a href="https://bugs.swift.org/browse/TF-923">TF-923</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28256">PR-28256</a>: Introduces negative tests for <a href="https://bugs.swift.org/browse/TF-922">TF-922</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28252">PR-28252</a>: Introduces negative tests for <a href="https://bugs.swift.org/browse/TF-962">TF-962</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28237">PR-28237</a>: Makes sure to emit SIL differentiability witness into the IRGenModule for the original function. Resolves <a href="https://bugs.swift.org/browse/TF-960">TF-960</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28225">PR-28225</a>: Revamping of usefulness propagation in activity analysis. Resolves <a href="https://bugs.swift.org/browse/TF-954">TF-954</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28223">PR-28223</a>: Introduces negative tests for <a href="https://bugs.swift.org/browse/TF-954">TF-954</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28207">PR-28207</a>: Makes sure that unused pullback results are destroyed in <code>PullbackEmitter::visitApplyInst</code> avoiding memory leak when wrapping a gradient in another function. Resolves <a href="https://bugs.swift.org/browse/TF-928">TF-928</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28205">PR-28205</a>: Fixes compilere crash for invalid <code>@differentiable</code> attributes in non-primary files. Resolves <a href="https://bugs.swift.org/browse/TF-953">TF-953</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28155">PR-28155</a>: Revamps and fixes <em>variedness</em> propagation in activity analysis. Resolves <a href="https://bugs.swift.org/projects/TF/issues/TF-681">TF-681</a>, <a href="https://bugs.swift.org/projects/TF/issues/TF-781">TF-781</a> and <a href="https://bugs.swift.org/projects/TF/issues/TF-933">TF-933</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/559">PR-559</a>: Removes <code>TensorProtocol</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/556">PR-556</a>: Adds <code>VJP</code>s for <code>mean(axes:)</code> and <code>mean(alongAxes:)</code> that don't use slicing or gather on shapes.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/549">PR-549</a>: Extracts conv1D functionality from <code>Conv1D</code> Layer . Resolves <a href="https://github.com/tensorflow/swift-apis/issues/528">Issue-528</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/413">PR-413</a>: Ports tensor control flow AutoDiff Tests. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/522">PR-522</a>: Fixes issue with default zero state for RNNs. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/518">Issue-518</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/519">PR-519</a>: Fixes issue with gradient accumulation in <code>RNN</code>. Partially resolves <a href="https://github.com/tensorflow/swift-apis/issues/518">Issue-518</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/534">PR-534</a>: Introduces <code>huberLoss</code> loss.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/553">PR-553</a>: Makes sure that auxiliary repositories ( swift-models and fastai_dev) build in release mode.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/551">PR-551</a>: Fixes bug in <code>Tensor.logSumExp</code> implementation.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/550">PR-550</a>: Makes <code>Tensor.product(squeezingAxes:)</code> differentiable. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/545">Issue-545</a>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/222">PR-222</a>: Introduces initial version of  benchmarking for training and inference.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/223">PR-223</a>, <a href="https://github.com/tensorflow/swift-models/pull/221">PR-221</a>: Fix deprecation warnings.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
