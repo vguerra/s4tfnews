@@ -1,0 +1,171 @@
+<h1>S4TF News - Issue 39, December 8th 2019</h1>
+<p>Welcome to the Issue #39 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/dynamicwebpaige">Paige Bailey</a> was at <a href="https://www.scale.bythebay.io/">Scale By The Bay 2019</a> this past Novembere to talk about <a href="https://scalebythebay2019.sched.com/event/RoTl/swift-for-tensorflow-machine-learning-with-no-boundaries">Swift for TensorFlow</a>. You can watch now the recording of the talk on <a href="https://youtu.be/GDpqBBNElRo">YouTube</a>.</p>
+</li>
+<li>
+<p>This week <a href="https://twitter.com/rickwierenga">Rick Wierenga</a> shared on his <a href="https://rickwierenga.com/">blog</a> two great articles on Swift for TensorFlow:</p>
+<ul>
+<li><a href="https://rickwierenga.com/blog/s4tf/s4tf-gan.html">An introduction to GANS in Swift for TensorFlow</a>.</li>
+<li><a href="https://rickwierenga.com/blog/s4tf/s4tf-mnist.html">Your first Swift for TensorFlow model</a>.</li>
+</ul>
+</li>
+<li>
+<p>A new Xcode 11 Development snapshot is now available for you to try out Swift for Tensorflow. Get it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2019-11-27-a-osx.pkg">here</a>.</p>
+</li>
+<li>
+<p>On Friday 6th of December, the 17th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li>
+<p><a href="https://twitter.com/magnushyttsten">Magnus Hyttsten</a> walked us trhough the Swift code of <code>GridMaze</code> implementation within OpenSiel. You can have a look at the code in <a href="https://github.com/deepmind/open_spiel/blob/master/swift/Sources/OpenSpiel/GridMaze.swift">GitHub</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/eaplatanios">Anthony Platanios</a> explained his <a href="https://github.com/tensorflow/swift-models/pull/231">PR-231</a> that introduces support for BERT.</p>
+</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28634">PR-28634</a>: Moves <code>PullbackEmitter</code> to a separate file. Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28611">PR-28611</a>: Moves <code>VJPEmitter</code> out to separate file. Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28608">PR-28608</a>: Serializes derivative function configurations per module.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28601">PR-28601</a>: Moves <code>JVPEmitter</code> out into a separate file. Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28570">PR-28570</a>: Supports reabstraction thunk differentiation.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28597">PR-28597</a>: Moves <code>dumpActivityInfo</code> to <code>DifferentiableActivityInfo</code> class. Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28582">PR-28582</a>: Improves AD sumbol linkage. Fixes <a href="https://bugs.swift.org/browse/TF-690">TF-690</a> and <a href="https://bugs.swift.org/browse/TF-1025">TF-1025</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28592">PR-28592</a>: Moves out <code>AdjointValue</code> out of <code>Differentiation.cpp</code>. Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28583">PR-28583</a>: Moves <code>LinearMapInfo</code> to a separate file.  Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28578">PR-28578</a>: Moves <code>DifferentiationInvoker</code> and <code>ADContext</code> to separate files. Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28558">PR-28558</a>: Splits <code>ADContext</code> into classes: <code>ADContext</code> and <code>DifferentiationTransformer</code>. Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28532">PR-28532</a>: Deletes <code>SILDifferentiableAttribute</code>. Resolves <a href="https://bugs.swift.org/browse/TF-898">TF-898</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28489">PR-28489</a>: Moves activity analysis to separate file. Partially resolves <a href="https://bugs.swift.org/browse/TF-993">TF-993</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28500">PR-28500</a>: Deprecates method-style differential operators. Resolves <a href="https://bugs.swift.org/browse/TF-1019">TF-1019</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28518">PR-28518</a>: Makes <code>AnyDerivative</code> <code>@frozen</code>. Resolves <a href="https://bugs.swift.org/browse/SR-11879">SR-11879</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/576">PR-576</a>: Fixes calculation of Glorot uniform for Tensors . Resolves <a href="https://bugs.swift.org/browse/TF-1029">TF-1029</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/564">PR-564</a>: Introduces <code>RAdam</code> optimizer.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/417">PR-417</a>: Introduces <code>GRUCell</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/571">PR-571</a>: Adds new <code>Array</code> ops and reorganices <code>Math.swift</code> for linear algebra PRs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/573">PR-573</a>: Removes differentiable closures as default arguments.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/570">PR-570</a>: Deprecates method-style differential operators.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/236">PR-236</a>: Adds support for minimal perfzero integration.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/191">PR-191</a>: Adds fast style transfer example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/232">PR-232</a>: Removes <code>softmax</code> activation from last layers of two models, improving loss display for <code>LeNet</code> example.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1011">TF-1011</a>: [AD] Forward-mode crash: Assertion failed: (Operand-&gt;getType().is&lt;TupleType&gt;() &amp;&amp; &quot;Expected a tuple typed operand?!&quot;).</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
