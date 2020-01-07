@@ -1,0 +1,99 @@
+<h1>S4TF News - Issue 43, January 5th 2020</h1>
+<p>Welcome to the Issue #43 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://github.com/WilliamHYZhang">William Zhang</a> has created a beginner-friendly tutorial for Swift for TensorFlow and SwiftPlot. Check it out on <a href="https://github.com/WilliamHYZhang/swiftplot/blob/notebook_addition/Notebooks/Machine%20Learning%20with%20Swift%20for%20TensorFlow%20and%20SwiftPlot.ipynb">GitHub</a>.</p>
+</li>
+<li>
+<p>On Friday 3rd of January, the 19th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li><a href="https://www.linkedin.com/in/troy-aaron-harvey/">Troy Harvey</a> from <a href="https://twitter.com/passivelogic">PassiveLogic</a> spoke about the work the company has been doing on top of Swift for Tensorflow specially on their extensions on KeyPaths.</li>
+</ul>
+<p>You can find the meeting notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28930">PR-28930</a>: Replaces SIMD use of <code>@differentiable(jvp:vjp:)</code> with <code>@derivative(of:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/28935">PR-28935</a>: Fixes <code>@derivative(of: subscript)</code> crash for <code>SIMD{n}</code> types. Resolves <a href="https://bugs.swift.org/browse/TF-1090">TF-1090</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/601">PR-601</a>: Adds precondition to <code>matmul</code> to check that <code>Tensor</code> has at least rank 2. Partially resolves <a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/602">PR-602</a>: Fixes a bug in <code>VJP</code> of <code>transposed(permutation:)</code>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/270">PR-270</a>: Enables user inputting source url while creating <code>CIFAR10</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/261">PR-261</a>: Introduces <code>DCGAN</code>.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/150">Issue-150</a>: Add GAN example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/146">Issue-146</a>: Add Neural Style Transfer example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
