@@ -1,0 +1,130 @@
+<h1>S4TF News - Issue 46, January 26th 2020</h1>
+<p>Welcome to the Issue #46 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>On Friday 24th of January, the 22nd SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li>
+<p><a href="https://twitter.com/jacopomangia">Jacopo Mangiavacchi</a> gave a lightning talk based on his recent <a href="https://medium.com/@JMangia/swift-loves-tensorflow-and-coreml-2a11da25d44">post</a> on exporting Swift for TensorFlow models into CoreML. He has made his <a href="https://github.com/JacopoMangiavacchi/S4TF_CoreML_Test/blob/master/slides.pdf">slides</a> and <a href="https://github.com/JacopoMangiavacchi/S4TF_CoreML_Test">code</a> available.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/guggersylvain">Sylvain Gugger</a> continuing the descussions on input pipelines, he gave a tour of <a href="https://github.com/sgugger/SwiftData"><code>Batcher</code></a>.</p>
+</li>
+</ul>
+<p>You can find the <a href="">meeting recording</a>, notes  and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/29402">PR-29402</a>: Makes sure that <code>swift-apis</code>'s <code>CTensorFlow</code> is used.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/29417">PR-29417</a>: Fixes install location for <code>TensorFlow</code> headers.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/29339">PR-29339</a>: Changes <code>-enable-experimental-cross-file-derivative-registration</code> to be a frontend flag.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/644">PR-644</a>: Disables <code>GPU</code> support on Windows.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/639">PR-639</a>: Renames the <code>TensorFlow</code> library to <code>swiftTensorFlow</code>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/283">PR-283</a>: Restructures the <code>ResNet</code> model to merge large and small variants, choose v1 vs. v1.5.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/276">PR-276</a>: Suppresses build warnings by registering derivatives using <code>@derivative(of:wrt:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/279">PR-279</a>: Updates <code>swift-models</code>'s benchmark to be runnable continuously.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1110">TF-1110</a>: Add SIMD-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1109">TF-1109</a>: Add Array-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1108">TF-1108</a>: Add tgmath JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1107">TF-1107</a>: Add JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/628">Issue-628</a>: Investigate size/performance tradeoffs for <code>-sil-inline-generics</code> and <code>-sil-partial-specialization</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/596">Issue-596</a>: Make <code>conv2DBackpropInput</code> public.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/68">Issue-68</a>: Recursive Neural Networks (structured data/trees).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/52">Issue-52</a>: Implement Recurrent Layers.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

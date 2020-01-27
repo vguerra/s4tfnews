@@ -68,3 +68,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Paris Buttfield-Addison](https://twitter.com/parisba)
 * [Lin Yu Hsiang](https://twitter.com/johnlinvc)
 * [Magnus Hyttsten](https://twitter.com/magnushyttsten)
+* [Sylvain Gugger](https://twitter.com/guggersylvain)
