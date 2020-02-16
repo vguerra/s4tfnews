@@ -1,0 +1,141 @@
+<h1>S4TF News - Issue 47, February 2nd 2020</h1>
+<p>Welcome to the Issue #47 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/s5tfteam">S5TF Team</a> has <a href="https://twitter.com/s5tfteam/status/1222675637548257280?s=20">annouced the v.0.0.1 release</a> of their libraries, written completely in Swift. Their goal is to make working with Swift for TensorFlow even easier. Check them out at https://s5tf-team.github.io/.</p>
+</li>
+<li>
+<p>A new Xcode 11 Development snapshot is now available for you to try out Swift for Tensorflow. Get it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2020-02-03-a-osx.pkg">here</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://twitter.com/ematejska">Ewa Matejska</a> starting a discussion regarding the support for <code>Python 2</code> and the strategy to be followed. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/MJLx6oWD1R8/4xh30YwnAQAJ">original message</a>)</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/29590">PR-29590</a>: Speeds up compile time by 3.5x by caching derivative function types. Resolves <a href="https://bugs.swift.org/browse/TF-1133">TF-1133</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/29564">PR-29564</a>: Fixes undiagnosed active <code>modify</code> accessor applications. . Resolves <a href="https://bugs.swift.org/browse/TF-1115">TF-1115</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/29541">PR-29541</a>: Adds <code>SILFunctionType</code> method assertion.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/29543">PR-29543</a>: Makes <code>@noDerivative</code> attribute imply non-varying semantics. Now, <code>@noDerivative</code> can be declared on all function-like declarations:
+<code>func</code>, <code>var</code>, <code>init</code>, and <code>subscript</code>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/657">PR-657</a>: Conforms all RNN cell <code>State</code> structs to the same protocols.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/653">PR-653</a>: Adds documentation to <code>Sequential</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/651">PR-651</a>: Adds support for installing the package by extending the <code>CMake</code> build system.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/650">PR-650</a>: Removes bad api usage in eager runtime.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href=""></a></p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/292">PR-292</a>: Fix the shape of the last dense layer in <code>Resnet18</code> and <code>ResNet34</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/287">PR-287</a>: Minor tweaks to the Gym models to allow for easier import internally.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1134">TF-1134</a>: Define derivatives for Float and Double maximum and minimum methods.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1110">TF-1110</a>: Add SIMD-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1109">TF-1109</a>: Add Array-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1108">TF-1108</a>: Add tgmath JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1107">TF-1107</a>: Add JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-499">TF-499</a>: Conditionally conform Optional to Differentiable.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/628">Issue-628</a>: Investigate size/performance tradeoffs for <code>-sil-inline-generics</code> and <code>-sil-partial-specialization</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/596">Issue-596</a>: Make <code>conv2DBackpropInput</code> public.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/408">Issue-408</a>: Port tensor control flow AD tests.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/68">Issue-68</a>: Recursive Neural Networks (structured data/trees).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/52">Issue-52</a>: Implement Recurrent Layers.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

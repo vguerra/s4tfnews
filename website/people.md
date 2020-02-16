@@ -69,3 +69,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Lin Yu Hsiang](https://twitter.com/johnlinvc)
 * [Magnus Hyttsten](https://twitter.com/magnushyttsten)
 * [Sylvain Gugger](https://twitter.com/guggersylvain)
+* [Ewa Matejska](https://twitter.com/ematejska)
