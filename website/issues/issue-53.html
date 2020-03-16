@@ -1,0 +1,128 @@
+<h1>S4TF News - Issue 53, March 15th 2020</h1>
+<p>Welcome to the Issue #53 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/30273">PR-30273</a>: Introduces initial support for <em>x10</em> library  in the toolchain. <code>utils/build-toolchain-tensorflow</code> gains a new flag: <code>--x10</code> (or <code>-x</code>).</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/740">PR-740</a>, <a href="https://github.com/tensorflow/swift-apis/pull/727">PR-727</a>, <a href="https://github.com/tensorflow/swift-apis/pull/726">PR-726</a>: Upstream changes for <em>x10</em>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/739">PR-739</a>: Compiles <code>TensorHandle</code> into <em>x10</em>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/734">PR-734</a>: Avoids to compile key-path extensions into <em>x10</em>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/730">PR-730</a>: Deduplicates <code>DataTypes</code>, <code>Precision</code> and <code>Tensor</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/728">PR-728</a>: Adds a fast-path for constructing scalars.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/719">PR-719</a>: Introduces initial support for TPU, using an XLA-based lazy tensor approach.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/379">PR-379</a>: Adds the ability to drop the last batch.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/383">PR-383</a>: Changes conformance for <code>TransformerLM</code> and <code>EmbeddingGPT</code> from <code>Differentiable</code> to <code>Module</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/367">PR-367</a>: Adds an initial version of a <code>macOS</code> UI for <code>Transformer</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/363">PR-363</a>: Introduces a <code>GPT-2</code> example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/366">PR-366</a>: Adds an option to disable checkpoint data CRC on read.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1200">TF-1200</a>: stdlib <code>pow()</code> function needs derivative.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1134">TF-1134</a>: Define derivatives for Float and Double maximum and minimum methods.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1110">TF-1110</a>: Add SIMD-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1109">TF-1109</a>: Add Array-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1108">TF-1108</a>: Add tgmath JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1107">TF-1107</a>: Add JVPs to standard library.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/685">Issue-685</a>: Support Advanced Layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/628">Issue-628</a>: Investigate size/performance tradeoffs for <code>-sil-inline-generics</code> and <code>-sil-partial-specialization</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/68">Issue-68</a>: Recursive Neural Networks (structured data/trees).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/52">Issue-52</a>: Implement Recurrent Layers.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/381">Issue-381</a>: Datasets should not be re-downloaded on each run of a test.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
