@@ -1,0 +1,162 @@
+<h1>S4TF News - Issue 54, March 22nd 2020</h1>
+<p>Welcome to the Issue #54 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>On Friday 20th of March, the 26th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li>A lot of exciting announcements were done during this last SIG Swift Design meeting. Among them: Performance and Accelerators ( TPU, XLA and a neat notebook-demo of GPT-2 on TPU), the new support in Differentiable Swift for <code>inout</code> parameters, checkpointing of models, better support in S4TF toolchains for macOS and Windows. The <a href="https://drive.google.com/file/d/1gI6Zk2jS0-MNkckYBnRFNtVCHoGKHWct/view?usp=sharing">recording</a> of this sessions is already available, as well as the <a href="https://drive.google.com/file/d/1zncjFqat4jMGdIErO7LJeXPUyoP-K9-i/view?usp=sharing">slides</a>.</li>
+</ul>
+<p>You can find the notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/jacopomangia">Jacopo Mangiavacchi</a> published on Medium an article named <a href="https://medium.com/@JMangia/coreml-on-device-training-with-transfer-learning-from-swift-for-tensorflow-models-b66004eb3068">CoreML on-device training with Transfer Learning from Swift for TensorFlow models</a> where he showcases <a href="https://github.com/JacopoMangiavacchi/SwiftCoreMLTools">SwiftCoreMLTools</a>: A library that mimics in Swift a subset of the functionalities of the official Apple CoreMLTools written in Python. In this article, Jacopo is using Transfer Learning techniques, where he reuses Embedding representations, coming from a previously trained model, in a brand new model trained from scratch on Apple devices. There is even a demo accompanying the post: <a href="https://github.com/JacopoMangiavacchi/CoreML-TransferLearning-Demo/blob/master/README.md">CoreML-TransferLearning-Demo</a>.</p>
+</li>
+<li>
+<p>A new Xcode 11 Development snapshot is now available for you to try out Swift for Tensorflow. Get it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2020-03-20-a-osx.pkg">here</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/30399">PR-30399</a>: Makes sure that original function of differentiability witnesses is always alive. Resolves <a href="https://bugs.swift.org/browse/TF-1202">TF-1202</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/30457">PR-30457</a>: Fixes compiler crash during subset parameter thunking in the presence of <code>inout</code>. Resolves <a href="https://bugs.swift.org/browse/TF-1204">TF-1204</a>.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/764">PR-764</a>: Allows <code>Runtime.swift</code> to compile in <code>x10</code> and then compiling both <code>x10</code> and tf_eager ops together.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/760">PR-760</a>: Add concept of backend to <code>Device</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/700">PR-700</a>: Fixes <code>stepSize</code> computationin <code>RAdam</code>
+optimizer.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/758">PR-758</a>: Unifies numerical correctness tests for optimizers and adds a Python reference implementation.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/733">PR-733</a>: Improves <code>AdaGrad</code> optimizer to match TensorFlow's implementation.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/741">PR-741</a>: Fixes <code>stepSize</code> computation in <code>AdaMax</code> optimizer.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/742">PR-742</a>: Fixes <code>stepSize</code> computation in <code>AMSGrad</code> optimizer.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/732">PR-732</a>: Adds numerical tests for <code>SGD</code>/<code>RMSProp</code>/<code>Adam</code> optimizers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/673">PR-673</a>, <a href="https://github.com/tensorflow/swift-apis/pull/756">PR-756</a>: Improve error messages regarding ranks and shapes for a number of operations on <code>Tensor</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/755">PR-755</a><a href="https://github.com/tensorflow/swift-apis/pull/743">PR-743</a>: Adds activation functions: <code>hardSigmoid</code> and <code>hardSwish</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/745">PR-745</a>: Introduces build option <code>BUILD_X10</code> for <code>CMake</code> builds.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/737">PR-737</a>: Improves <code>CMake</code> build for testing and adds <code>Experimental</code> module.s</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/736">PR-736</a>: Cleans up install rules by introducing <code>_install_target</code>.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/399">PR-399</a>: Allows to drop last smaller batch in <code>Cola</code> Dataset.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/362">PR-362</a>: Adds ability to download compressed model checkpoints.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/378">PR-378</a>: Introduces <code>MobileNetV2</code>.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1134">TF-1134</a>: Define derivatives for Float and Double maximum and minimum methods.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1110">TF-1110</a>: Add SIMD-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1109">TF-1109</a>: Add Array-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1108">TF-1108</a>: Add tgmath JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1107">TF-1107</a>: Add JVPs to standard library.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/685">Issue-685</a>: Support Advanced Layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/628">Issue-628</a>: Investigate size/performance tradeoffs for <code>-sil-inline-generics</code> and <code>-sil-partial-specialization</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/68">Issue-68</a>: Recursive Neural Networks (structured data/trees).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/52">Issue-52</a>: Implement Recurrent Layers.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/381">Issue-381</a>: Datasets should not be re-downloaded on each run of a test.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
