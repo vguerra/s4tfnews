@@ -70,3 +70,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Magnus Hyttsten](https://twitter.com/magnushyttsten)
 * [Sylvain Gugger](https://twitter.com/guggersylvain)
 * [Ewa Matejska](https://twitter.com/ematejska)
+* [Saleem Abdulrasool](https://twitter.com/compnerd)
