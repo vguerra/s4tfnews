@@ -1,0 +1,133 @@
+<h1>S4TF News - Issue 56, April 5th 2020</h1>
+<p>Welcome to the Issue #56 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>On Friday 3rd of April, the 28th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li><a href="https://github.com/asuhan">Alex Suhan</a> made a presentation on how Swift for TensorFlow runs on XLA devices (TPUs and GPUs). He took us on a deep dive on X10, which is an implementation of S4TF Tensor operations using XLA. His slides are available <a href="https://docs.google.com/presentation/d/1JpNbOq_N_qIWMPhzZ3o2Id5vDjHS8o5vtaGIU8VcSeA/edit?usp=sharing">here</a>.</li>
+</ul>
+<p>Recording from this session is available <a href="https://drive.google.com/file/d/1ux-1SCxGmhJ4mGQ-mCSIuK0QCccREvhl/view?usp=sharing">online</a>.</p>
+<p>As well, you can find the notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+<li>
+<p>You can now find Development Snapshots of S4TF with X10 support at the <a href="https://docs.google.com/presentation/d/1JpNbOq_N_qIWMPhzZ3o2Id5vDjHS8o5vtaGIU8VcSeA/edit?usp=sharing">Installation page</a>.</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/30726">PR-30726</a>: Delets tests that have been upstreamed.</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/804">PR-804</a>: Fixes gradient values used in <code>Optimizer</code> tests to match the ones in reference in <code>Python</code>. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/759">Issue-759</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/800">PR-800</a>: Adds option <code>DEFAULT_BACKEND_EAGER</code> to allow different default backends.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/795">PR-795</a>: Marks <code>Dataset</code> APIs as deprecated.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/735">PR-735</a>: Adds support for <code>x10</code> in CI.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/713">PR-713</a>: Removes <code>Python</code> module compatibility.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/409">PR-409</a>: Introduces MobileNet v3 ( <code>MobileNetV3Large</code> and <code>MobileNetV3Small</code>).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/431">PR-431</a>: Adds <code>ResNetCIFAR10</code> benchmark.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/430">PR-430</a>: Changes default download location for <code>BostonHousing</code> and <code>CIFAR-10</code> datasets.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/428">PR-428</a>: Removes device placement <code>CIFAR10</code> and <code>MNIST</code> examples, as they are already loaded on the device.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/408">PR-408</a>: Introduces <code>MobileNetV1-Imagenette</code> and <code>MobileNetV2-Imagenette</code> targets.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1134">TF-1134</a>: Define derivatives for Float and Double maximum and minimum methods.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1110">TF-1110</a>: Add SIMD-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1109">TF-1109</a>: Add Array-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1108">TF-1108</a>: Add tgmath JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1107">TF-1107</a>: Add JVPs to standard library.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/685">Issue-685</a>: Support Advanced Layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/628">Issue-628</a>: Investigate size/performance tradeoffs for <code>-sil-inline-generics</code> and <code>-sil-partial-specialization</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/68">Issue-68</a>: Recursive Neural Networks (structured data/trees).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/52">Issue-52</a>: Implement Recurrent Layers.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
