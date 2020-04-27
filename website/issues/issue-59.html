@@ -1,0 +1,184 @@
+<h1>S4TF News - Issue 59, April 26th 2020</h1>
+<p>Welcome to the Issue #59 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/jacopomangia">Jacopo Mangiavacchi</a> shared a post showing how you can <a href="https://medium.com/@JMangia/mnist-cnn-core-ml-training-c0f081014fa6">train a LeNet CNN MNIST model directly on iPhone</a>. You can find the source code of the blog post on <a href="https://github.com/JacopoMangiavacchi/MNIST-CoreML-Training">GitHub</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/thedeveshshetty">Devesh Shetty</a> gave a talk at <a href="https://www.youtube.com/channel/UCMlfIpRC-995awLMUzdHSIg">TensorFlow UserGroup Mumbai</a> introduction to Swift for TensorFlow. The recording is already available on <a href="https://www.youtube.com/watch?v=FdsiVplwbYU">YouTube</a>.</p>
+</li>
+<li>
+<p><a href="https://tryolabs.com/">tryolabs</a> is organizing a webinar called <a href="https://us02web.zoom.us/webinar/register/WN_SnhWLtKOQ8-BxEhyoFzfuw">A deeper dive into Swift for Tensorflow</a> on which they will expand their blog post <a href="https://tryolabs.com/blog/2020/04/02/swift-googles-bet-on-differentiable-programming/">Swift: Google's bet on differentiable programming</a>. The webinar is scheduled for May 7th, 2020 at  05:00 PM (UTC). Be sure to register <a href="https://us02web.zoom.us/webinar/register/WN_SnhWLtKOQ8-BxEhyoFzfuw?timezone_id=UTC">here</a>.</p>
+</li>
+<li>
+<p>On Friday 24th of April, the 29th SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li><a href="https://github.com/texasmichelle">Michelle Casbon</a> made a presentation on a proposal to have summaries for models. Her slides are available <a href="https://docs.google.com/document/d/1hEhMiwLtuzsN3RvIC3FAh6NvtTimU8o_qdzMkGvntVg">here</a>.</li>
+</ul>
+<p>Recording from this session is available <a href="https://drive.google.com/file/d/1Ju0Pb0bJ5Vs5ti6tkVAZJHs2NDsWDFN4/view?usp=sharing">online</a>.</p>
+<p>As well, you can find the notes and all questions raised in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+</li>
+<li>
+<p>Nightly Toolchains with support for CUDA 10.2 are now available. You can find them in the <a href="https://github.com/tensorflow/swift/blob/master/Installation.md#development-snapshots">Development Snapshots</a>.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li>
+<p>Peter Jung asks how one can do automatic model search? (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/IP5D-1DT-Mc/bSEytd2MBQAJ">original message</a>)</p>
+</li>
+<li>
+<p>James MacGlashan asked how does <code>Array</code> conform to <code>Differentiable</code>?. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/H6HvVwQOQMU/AjwlR9ppBQAJ">original message</a>).</p>
+</li>
+<li>
+<p>Rahul asked about use case of differentiable initializer. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/Z3fsqmjJQ-o/d0vNR4DtBAAJ">original message</a>).</p>
+</li>
+<li>
+<p>rex-remind started a conversation on Adding multithreading to PythonKit. (<a href="https://groups.google.com/a/tensorflow.org/d/msg/swift/MWFwGhHT36w/h57om4aDBAAJ">original message</a>)</p>
+</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li>
+<p><a href="https://github.com/apple/swift/pull/31249">PR-31249</a>: Enable cross-file derivative registration by default on. Resolves <a href="https://bugs.swift.org/browse/TF-1097">TF-1097</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/31216">PR-31216</a>: Adds <code>--no-tensorflow-swift-apis</code> option to <code>utils/build-toolchain-tensorflow</code> to have a tensorflow toolchains without <code>tensorflow-swift-apis</code> library.</p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/pull/31158">PR-31158</a>: Removes <code>TensorFlow</code> workarounds in build logic.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/882">PR-882</a>: Avoids unnecessary <code>Tensor</code> materialization in <code>Tensor</code>-<code>Scalar</code> op derivatives.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/881">PR-881</a>: Makes use of <code>Device</code> more explicit.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/765">PR-765</a>: Introduces <code>GaussianDropout</code>. Partially resolves <a href="https://github.com/tensorflow/swift-apis/issues/685">Issue-685</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/878">PR-878</a>: Allows picking the best device automatically.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/857">PR-857</a>: Updates to CUDA <code>10.2</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/851">PR-851</a>: Builds <code>TensorFlow</code> with <code>x10</code> support if building an <code>x10</code> toolchain.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/863">PR-863</a>: Introduces various fixes to allow building with the <code>X10</code> backend on <code>Windows</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/853">PR-853</a>: Makes sure to preserve the source device in the output device when falling back to <code>TFEager</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/862">PR-862</a>: Improves <code>x10</code>'s build for Windows, it reuses the existing <code>ThreadLocalStorage</code> type in <code>swift-apis</code> for TLS
+access to mask out differences between platforms.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/860">PR-860</a>: Deprecate <code>Layer.call(_:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/854">PR-854</a>: Restructures the <code>X10</code> swift bindings to split <code>X10</code> and <code>CTensorFlow</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/847">PR-847</a>: Makes sure that Tensors be on consistent device for bandapart operations.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="">PR-365</a>https://github.com/tensorflow/swift-models/pull/365: Introduces <code>pix2pix</code> example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/446">PR-446</a>: Adds support for <code>COCO</code> dataset.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/444">PR-444</a>: Restructures benchmarks to be batch-based in training.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/453">PR-453</a>: Makes <code>GPT2-WikiText2</code> train on TPU with <code>x10</code>.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1134">TF-1134</a>: Define derivatives for Float and Double maximum and minimum methods.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1110">TF-1110</a>: Add SIMD-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1109">TF-1109</a>: Add Array-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1108">TF-1108</a>: Add tgmath JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1107">TF-1107</a>: Add JVPs to standard library.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/685">Issue-685</a>: Support Advanced Layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/628">Issue-628</a>: Investigate size/performance tradeoffs for <code>-sil-inline-generics</code> and <code>-sil-partial-specialization</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/68">Issue-68</a>: Recursive Neural Networks (structured data/trees).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/52">Issue-52</a>: Implement Recurrent Layers.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/151">Issue-151</a>: Add Neural Recommendation based on embeddings example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
