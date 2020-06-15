@@ -1,0 +1,200 @@
+<h1>S4TF News - Issue 66, June 14th 2020</h1>
+<p>Welcome to the Issue #66 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>A new Xcode 11 Development snapshot is now available for you to try out Swift for Tensorflow. Get it <a href="https://storage.googleapis.com/swift-tensorflow/mac/swift-tensorflow-DEVELOPMENT-2020-06-12-a-osx.pkg">here</a>.</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift Compiler (master branch)</h4>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/32269">PR-32269</a>: Improves AutoDiff debugging  utilities.</li>
+</ul>
+<h4>Swift Compiler (tensorflow branch)</h4>
+<ul>
+<li><a href="https://github.com/apple/swift/pull/32343">PR-32343</a>: Skips implicit <code>GenericTypeParamDecl</code> AST verification.</li>
+</ul>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/996">PR-996</a>: Removes deprecated APIs:  <code>Tensor.droppingOut(probability:)</code> and <code>Layer.call(_:)</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/1000">PR-1000</a>: Removes support for building without <code>X10</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/998">PR-998</a>: Introduces <code>Dilation2D</code> and <code>Erosion2D</code> morphological layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/994">PR-994</a>: Fixes <code>linSpace</code>. Resolves <a href="https://github.com/tensorflow/swift-apis/issues/980">Issue-980</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/990">PR-990</a>: Adds deprecation notice to <code>TensorFlowCheckpointReader</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/991">PR-991</a>: Iimports the <code>_Differentiation</code> module.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/992">PR-992</a>: Allows building against Foundation build-tree artifacts.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/988">PR-988</a>: Optimizes <code>split</code> into count.</p>
+</li>
+</ul>
+<h4>Swift Jupyter</h4>
+<ul>
+<li><a href="https://github.com/google/swift-jupyter/pull/106">PR-106</a>: Uses correct interface to read bit pattern from pointer.</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/566">PR-566</a>: Adds inline documentation for <code>WordSeg</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/565">PR-565</a>: Adds an example application and tutorial notebook that generates both Mandelbrot and Julia set fractal images.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/605">PR-605</a>: Converts <code>NeuMF-MovieLens</code> to <code>Epoches</code>. Partially resolves <a href="https://github.com/tensorflow/swift-models/issues/592">Issue-592</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/604">PR-604</a>: Migrates <code>OxfordIIITPets</code> dataset to <code>Epochs</code>. Partially resolves <a href="https://github.com/tensorflow/swift-models/issues/592">Issue-592</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/603">PR-603</a>: Converts <code>Imagenette</code> and <code>Imagewoof</code> datasets to <code>Epochs</code>. Partially resolves <a href="https://github.com/tensorflow/swift-models/issues/592">Issue-592</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/602">PR-602</a>: Switches off <code>Batcher</code> from <code>Pix2Pix</code>. Resolves <a href="https://github.com/tensorflow/swift-models/issues/582">Issue-582</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/595">PR-595</a>: Deprecates <code>Batcher</code> in favor of the <code>Epochs</code> API.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/593">PR-593</a>: Makes <code>WordSeg</code> benchmarks support <code>x10</code> as an option.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/594">PR-594</a>: Adds <code>X10</code> <code>WordSeg</code> variants to PerfZero interface file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/589">PR-589</a>: Switch off <code>Batcher</code> from <code>CycleGAN</code>. Partially resolves <a href="https://github.com/tensorflow/swift-models/issues/582">Issue-582</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/554">PR-554</a>: Switches in <code>BERT</code> to use <code>CheckpointReader</code> to load tensors from checkpoint.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/578">PR-578</a>: Converts <code>LeNet-MNIST</code> example to <code>X10</code>. Partially resolves <a href="https://github.com/tensorflow/swift-models/issues/514">Issue-514</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/576">PR-576</a>: Replace <code>WeightDecayedAdam</code> with an x10 optimizer for <code>BERT-CoLA</code>.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1134">TF-1134</a>: Define derivatives for Float and Double maximum and minimum methods.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1110">TF-1110</a>: Add SIMD-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1109">TF-1109</a>: Add Array-related JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1108">TF-1108</a>: Add tgmath JVPs to standard library.</p>
+</li>
+<li>
+<p><a href="https://bugs.swift.org/browse/TF-1107">TF-1107</a>: Add JVPs to standard library.</p>
+</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/759">Issue-759</a>: Investigate optimizer numerical correctness vs Python reference implementations.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/685">Issue-685</a>: Support Advanced Layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/628">Issue-628</a>: Investigate size/performance tradeoffs for <code>-sil-inline-generics</code> and <code>-sil-partial-specialization</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/618">Issue-618</a>: Improve compilation time.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/68">Issue-68</a>: Recursive Neural Networks (structured data/trees).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/52">Issue-52</a>: Implement Recurrent Layers.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/598">Issue-598</a>: Find a more descriptive word for <code>numericalized</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/549">Issue-549</a>: Add a DistilGPT2 variant.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/489">Issue-489</a>: [BERT-CoLA]: Use common file extraction functions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/488">Issue-488</a>: [BERT-CoLA] Data source resolution.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/436">Issue-436</a>: Transformer chaos containment.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/434">Issue-434</a>: GPT2 and BERT alignment.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/433">Issue-433</a>: Verify BERT variants.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/315">Issue-315</a>: Improve BERT model.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/280">Issue-280</a>: Add transfer learning support to image classification models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/278">Issue-278</a>: Add support for addition of UCI datasets.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/201">Issue-201</a>: Add unit tests for models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+
