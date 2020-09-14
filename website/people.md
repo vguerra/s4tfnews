@@ -71,3 +71,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Sylvain Gugger](https://twitter.com/guggersylvain)
 * [Ewa Matejska](https://twitter.com/ematejska)
 * [Saleem Abdulrasool](https://twitter.com/compnerd)
+* [Vojta Molda](https://twitter.com/vojtamolda)
