@@ -72,3 +72,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Ewa Matejska](https://twitter.com/ematejska)
 * [Saleem Abdulrasool](https://twitter.com/compnerd)
 * [Vojta Molda](https://twitter.com/vojtamolda)
+* [Aleksandr Efremov](https://www.linkedin.com/in/aleksandr-efremov/)
