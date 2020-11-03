@@ -1,0 +1,161 @@
+<h1>S4TF News - Issue 85, October 25th 2020</h1>
+<p>Welcome to the Issue #85 of <em>Swift for TensorFlow Newsletter</em>. A newsletter letter that summarizes weekly activity around the Swift for TensorFlow project.</p>
+<p>Enjoy!</p>
+<hr>
+<h2>News and Articles</h2>
+<ul>
+<li>
+<p>On Friday 23rd of October, the 42nd SIG Swift Design meeting took place. Here you have the highlights:</p>
+<ul>
+<li>
+<p><a href="http://www.marcrasi.com/">Marc Rasi</a> gave a talk showcasing <a href="https://github.com/borglab/SwiftFusion">SwiftFusion</a>: A Differentiable Swift-based sensor fusion library. Marc explained factor graphs and exposed some implementation details within the library. The slides of the presentation are available <a href="https://docs.google.com/presentation/d/1_CvEiY6RSdRQXXE5_a652uIl3tgKy2248zTm_URU_KU/edit#slide=id.p">online</a>.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/FanOnRobotics">Fan Jiang</a> presented a use case for SwiftFusion: Bee Tracking, explaining how factor graphs can be used for tracking. The slides of the presentation are available <a href="https://docs.google.com/presentation/d/1_ld369jPlN6l9-n6XaD1fwOXClSEsAWKNZxTEu6AiPs/edit#slide=id.p">online</a>.</p>
+</li>
+</ul>
+<p>You can find the notes for this meeting in this <a href="https://docs.google.com/document/d/1Fm56p5rV1t2Euh6WLtBFKGqI43ozC3EIjReyLk-LCLU/edit#heading=h.ybjihr2k1s4">google doc</a>.</p>
+<p>Recording from this session will be available soon.</p>
+</li>
+</ul>
+<h2>The mailing list</h2>
+<ul>
+<li><a href="https://twitter.com/texasmichelle">Michelle Casbon</a> announced the release of experimental Deep Learning VM images with S4TF toolchains and CUDA libraries pre-installed on Ubuntu 18.04. (<a href="https://groups.google.com/a/tensorflow.org/g/swift/c/JtWuW3TFWDo/m/sCWHfF7hBgAJ">original message</a>)</li>
+</ul>
+<h2>S4TF Commits</h2>
+<h4>Swift TensorFlow APIs</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/1110">PR-1110</a>: Cleans up further <code>XLATensor</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/pull/1109">PR-1109</a>: Makes local backend default for GPU.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/679">PR-679</a>: Converts to <code>TrainingLoop</code> for <code>BERTCoLA</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/pull/669">PR-669</a>: Introduces implementation of the model from <a href="https://distill.pub/2020/growing-ca/">Growing Neural Cellular Automata</a>.</p>
+</li>
+</ul>
+<h4>TensorFlow documentation</h4>
+<ul>
+<li><a href="https://github.com/tensorflow/swift/pull/548">PR-548</a>: Add Google Cloud Platform option with Deep Learning VM commands.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Looking to contribute to the project? Have a look at the currently open tickets for starters:</p>
+<h4>Swift Compiler</h4>
+<ul>
+<li><a href="https://bugs.swift.org/browse/TF-1134">TF-1134</a>: Define derivatives for Float and Double maximum and minimum methods.</li>
+</ul>
+<h4>Swift TensorFlow API</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/1075">Issue-1075</a>: [summary] Better formatting.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/1058">Issue-1058</a>: Lift <code>Tensor.dimensionGathering()</code> out of <code>swift-models</code> and into <code>swift-apis</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/1048">Issue-1048</a>: Some mutating tensor operations are not <code>@differentiable</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/759">Issue-759</a>: Investigate optimizer numerical correctness vs Python reference implementations.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/685">Issue-685</a>: Support Advanced Layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/628">Issue-628</a>: Investigate size/performance tradeoffs for <code>-sil-inline-generics</code> and <code>-sil-partial-specialization</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/618">Issue-618</a>: Improve compilation time.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/517">Issue-517</a>: Add preconditions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/483">Issue-483</a>: Swifty API discovery via <code>@available</code> on raw APIs.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/402">Issue-402</a>: Add derivative tests for layers.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/160">Issue-160</a>: Update doc comments on non-mutating API to use proper wording.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/127">Issue-127</a>: Adding more Optimizers and Losses.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/77">Issue-77</a>:  Adding Test Cases for Layers in <code>Layer.swift</code> file.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/68">Issue-68</a>: Recursive Neural Networks (structured data/trees).</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/54">Issue-54</a>: Implement more layers that are available in Keras.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-apis/issues/52">Issue-52</a>: Implement Recurrent Layers.</p>
+</li>
+</ul>
+<h4>Swift Models</h4>
+<ul>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/675">Issue-675</a>: Better error message on unzip failure.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/657">Issue-657</a>: Add documentation to the Gym models to specify additional dependencies for DQN.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/643">Issue-643</a>: Implementing graph convolutional neural networks.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/598">Issue-598</a>: Find a more descriptive word for <code>numericalized</code>.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/549">Issue-549</a>: Add a DistilGPT2 variant.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/489">Issue-489</a>: [BERT-CoLA]: Use common file extraction functions.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/488">Issue-488</a>: [BERT-CoLA] Data source resolution.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/436">Issue-436</a>: Transformer chaos containment.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/434">Issue-434</a>: GPT2 and BERT alignment.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/433">Issue-433</a>: Verify BERT variants.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/315">Issue-315</a>: Improve BERT model.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/280">Issue-280</a>: Add transfer learning support to image classification models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/278">Issue-278</a>: Add support for addition of UCI datasets.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/201">Issue-201</a>: Add unit tests for models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/149">Issue-149</a>: Add Object Detection models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/148">Issue-148</a>: Add a Neural Machine Translation example.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/swift-models/issues/147">Issue-147</a>: Add Speech to text example.</p>
+</li>
+</ul>
+<hr>
+<p>SUBSCRIBE AT <a href="https://www.s4tfnews.com/">S4TFNEWS.COM</a></p>
+

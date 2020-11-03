@@ -73,3 +73,5 @@ This is the list of people I have mentioned in the newsletter:
 * [Saleem Abdulrasool](https://twitter.com/compnerd)
 * [Vojta Molda](https://twitter.com/vojtamolda)
 * [Aleksandr Efremov](https://www.linkedin.com/in/aleksandr-efremov/)
+* [Fan Jiang](https://twitter.com/FanOnRobotics)
+* [Michelle Casbon](https://twitter.com/texasmichelle)
