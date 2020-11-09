@@ -75,3 +75,4 @@ This is the list of people I have mentioned in the newsletter:
 * [Aleksandr Efremov](https://www.linkedin.com/in/aleksandr-efremov/)
 * [Fan Jiang](https://twitter.com/FanOnRobotics)
 * [Michelle Casbon](https://twitter.com/texasmichelle)
+* [Denys Shabalin](https://twitter.com/den_sh)
