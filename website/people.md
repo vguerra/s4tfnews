@@ -1,6 +1,6 @@
 # List of people in S4TF News
 
-This is the list of people I have mentioned in the newsletter:
+This is the list of people I have mentioned in the newsletter ( in no specific order):
 
 * [Chris Lattner](https://twitter.com/clattner_llvm)
 * [Mingsheng Hong](https://twitter.com/mingshenghong)
